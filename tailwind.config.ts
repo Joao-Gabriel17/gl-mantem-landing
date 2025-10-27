@@ -14,15 +14,34 @@ export default {
     },
     extend: {
       colors: {
+        /* HVAC Brand Palette */
+        primary: {
+          500: "var(--primary-500)",
+          600: "var(--primary-600)",
+          700: "var(--primary-700)",
+          DEFAULT: "hsl(var(--primary))",
+          foreground: "hsl(var(--primary-foreground))",
+        },
+        bg: {
+          900: "var(--bg-900)",
+          800: "var(--bg-800)",
+        },
+        surface: {
+          700: "var(--surface-700)",
+        },
+        textc: {
+          100: "var(--text-100)",
+          300: "var(--text-300)",
+        },
+        line: {
+          700: "var(--line-700)",
+        },
+        /* Original shadcn colors */
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
-        primary: {
-          DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))",
-        },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",
