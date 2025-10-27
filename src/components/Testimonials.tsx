@@ -75,7 +75,7 @@ export const Testimonials = () => {
   ));
 
   return (
-    <section id="testimonials" className="py-24 md:py-40 bg-card/30">
+    <section id="testimonials" className="py-24 md:py-40 bg-surface-700/20">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-20 md:mb-24 animate-fade-in-up">
