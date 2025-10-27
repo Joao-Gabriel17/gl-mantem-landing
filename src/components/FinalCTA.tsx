@@ -15,10 +15,10 @@ export const FinalCTA = () => {
             {/* Left Column - Content */}
             <div className="space-y-10 flex flex-col justify-center">
               <div className="space-y-6 animate-fade-in-up">
-                <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
+                <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-textc-100 leading-tight">
                   Respire ar limpo hoje
                 </h2>
-                <p className="text-2xl text-muted-foreground leading-relaxed">
+                <p className="text-2xl text-textc-300 leading-relaxed">
                   Instalação e higienização com pontualidade e acabamento impecável
                 </p>
               </div>
