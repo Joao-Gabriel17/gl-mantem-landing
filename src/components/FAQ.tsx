@@ -30,33 +30,33 @@ export const FAQ = () => {
   ];
 
   return (
-    <section id="faq" className="py-20 md:py-32">
+    <section id="faq" className="py-24 md:py-40">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
         {/* Section Header */}
-        <div className="text-center mb-16 animate-fade-in-up">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
+        <div className="text-center mb-20 md:mb-24 animate-fade-in-up">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-8">
             Perguntas Frequentes
           </h2>
-          <p className="text-lg text-muted-foreground">
+          <p className="text-xl md:text-2xl text-muted-foreground">
             Tire suas dúvidas sobre nossos serviços
           </p>
         </div>
 
         {/* FAQ Accordion */}
         <div className="animate-fade-in">
-          <Accordion type="single" collapsible className="space-y-4">
+          <Accordion type="single" collapsible className="space-y-6">
             {faqs.map((faq, index) => (
               <AccordionItem
                 key={index}
                 value={`item-${index}`}
-                className="bg-card border border-border rounded-lg px-6 hover:border-primary/30 transition-colors duration-300"
+                className="bg-card border border-border rounded-xl px-8 hover:border-primary/30 transition-colors duration-300"
               >
-                <AccordionTrigger className="text-left hover:no-underline py-6">
-                  <span className="text-lg font-semibold text-foreground pr-4">
+                <AccordionTrigger className="text-left hover:no-underline py-8">
+                  <span className="text-xl font-semibold text-foreground pr-4">
                     {faq.question}
                   </span>
                 </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground pb-6 leading-relaxed">
+                <AccordionContent className="text-lg text-muted-foreground pb-8 leading-relaxed">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>

@@ -4,6 +4,7 @@ import avatar1 from "@/assets/avatar-1.jpg";
 import avatar2 from "@/assets/avatar-2.jpg";
 import avatar3 from "@/assets/avatar-3.jpg";
 import avatar4 from "@/assets/avatar-4.jpg";
+import { AutoCarousel } from "./AutoCarousel";
 
 export const Testimonials = () => {
   const testimonials = [
@@ -37,58 +38,59 @@ export const Testimonials = () => {
     },
   ];
 
+  const testimonialCards = testimonials.map((testimonial, index) => (
+    <Card
+      key={index}
+      className="p-8 bg-card border-border hover:border-primary/30 hover:shadow-lg transition-all duration-300 h-full flex flex-col"
+    >
+      {/* Rating Stars */}
+      <div className="flex gap-1 mb-6">
+        {[...Array(testimonial.rating)].map((_, i) => (
+          <Star key={i} className="w-5 h-5 fill-primary text-primary" />
+        ))}
+      </div>
+
+      {/* Testimonial Text */}
+      <p className="text-lg text-muted-foreground mb-8 leading-relaxed flex-grow">
+        "{testimonial.text}"
+      </p>
+
+      {/* Author Info */}
+      <div className="flex items-center gap-4 pt-6 border-t border-border">
+        <img
+          src={testimonial.avatar}
+          alt={testimonial.name}
+          className="w-14 h-14 rounded-full object-cover ring-2 ring-primary/20"
+        />
+        <div>
+          <p className="font-semibold text-foreground text-base">
+            {testimonial.name}
+          </p>
+          <p className="text-sm text-muted-foreground">
+            {testimonial.location}
+          </p>
+        </div>
+      </div>
+    </Card>
+  ));
+
   return (
-    <section id="testimonials" className="py-20 md:py-32 bg-card/30">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="testimonials" className="py-24 md:py-40 bg-card/30">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16 animate-fade-in-up">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
+        <div className="text-center max-w-3xl mx-auto mb-20 md:mb-24 animate-fade-in-up">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-8">
             O Que Dizem Nossos Clientes
           </h2>
-          <p className="text-lg text-muted-foreground">
+          <p className="text-xl md:text-2xl text-muted-foreground">
             Depoimentos reais de quem confia no nosso trabalho
           </p>
         </div>
 
-        {/* Testimonials Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {testimonials.map((testimonial, index) => (
-            <Card
-              key={index}
-              className="p-6 bg-card border-border hover:border-primary/30 hover:shadow-lg transition-all duration-300 animate-fade-in"
-              style={{ animationDelay: `${index * 100}ms` }}
-            >
-              {/* Rating Stars */}
-              <div className="flex gap-1 mb-4">
-                {[...Array(testimonial.rating)].map((_, i) => (
-                  <Star key={i} className="w-4 h-4 fill-primary text-primary" />
-                ))}
-              </div>
-
-              {/* Testimonial Text */}
-              <p className="text-muted-foreground mb-6 leading-relaxed min-h-[80px]">
-                "{testimonial.text}"
-              </p>
-
-              {/* Author Info */}
-              <div className="flex items-center gap-3 pt-4 border-t border-border">
-                <img
-                  src={testimonial.avatar}
-                  alt={testimonial.name}
-                  className="w-12 h-12 rounded-full object-cover ring-2 ring-primary/20"
-                />
-                <div>
-                  <p className="font-semibold text-foreground text-sm">
-                    {testimonial.name}
-                  </p>
-                  <p className="text-xs text-muted-foreground">
-                    {testimonial.location}
-                  </p>
-                </div>
-              </div>
-            </Card>
-          ))}
-        </div>
+        {/* Testimonials Carousel */}
+        <AutoCarousel autoplayDelay={5000}>
+          {testimonialCards}
+        </AutoCarousel>
       </div>
     </section>
   );

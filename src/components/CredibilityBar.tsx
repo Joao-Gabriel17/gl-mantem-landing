@@ -1,4 +1,5 @@
 import { Star, Shield, Zap, Clock, CheckCircle } from "lucide-react";
+import { AutoCarousel } from "./AutoCarousel";
 
 export const CredibilityBar = () => {
   const credentials = [
@@ -29,29 +30,30 @@ export const CredibilityBar = () => {
     },
   ];
 
-  return (
-    <section className="py-12 md:py-16 bg-card/50 border-y border-border">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 md:gap-8">
-          {credentials.map((item, index) => {
-            const Icon = item.icon;
-            return (
-              <div
-                key={index}
-                className="flex flex-col items-center text-center space-y-2 animate-fade-in"
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
-                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                  <Icon className="w-6 h-6 text-primary" />
-                </div>
-                <div>
-                  <p className="text-xs text-muted-foreground">{item.title}</p>
-                  <p className="text-sm font-semibold text-foreground mt-1">{item.value}</p>
-                </div>
-              </div>
-            );
-          })}
+  const credentialItems = credentials.map((item, index) => {
+    const Icon = item.icon;
+    return (
+      <div
+        key={index}
+        className="flex flex-col items-center text-center space-y-3 p-6 animate-fade-in"
+      >
+        <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center">
+          <Icon className="w-7 h-7 text-primary" />
         </div>
+        <div>
+          <p className="text-sm text-muted-foreground mb-1">{item.title}</p>
+          <p className="text-base font-semibold text-foreground">{item.value}</p>
+        </div>
+      </div>
+    );
+  });
+
+  return (
+    <section className="py-16 md:py-20 bg-card/50 border-y border-border">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+        <AutoCarousel autoplayDelay={3500}>
+          {credentialItems}
+        </AutoCarousel>
       </div>
     </section>
   );

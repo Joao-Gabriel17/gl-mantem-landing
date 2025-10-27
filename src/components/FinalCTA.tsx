@@ -5,26 +5,26 @@ import whatsappMockup from "@/assets/whatsapp-mockup.jpg";
 
 export const FinalCTA = () => {
   return (
-    <section className="py-20 md:py-32 bg-gradient-to-b from-card/20 to-background relative overflow-hidden">
+    <section className="py-24 md:py-40 bg-gradient-to-b from-card/20 to-background relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 -z-10" />
       
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <Card className="max-w-6xl mx-auto bg-card/80 backdrop-blur-sm border-border shadow-elevated overflow-hidden">
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 p-8 md:p-12">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+        <Card className="bg-card/80 backdrop-blur-sm border-border shadow-elevated overflow-hidden">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 p-10 md:p-16">
             {/* Left Column - Content */}
-            <div className="space-y-8 flex flex-col justify-center">
-              <div className="space-y-4 animate-fade-in-up">
-                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight">
+            <div className="space-y-10 flex flex-col justify-center">
+              <div className="space-y-6 animate-fade-in-up">
+                <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
                   Respire ar limpo hoje
                 </h2>
-                <p className="text-xl text-muted-foreground leading-relaxed">
+                <p className="text-2xl text-muted-foreground leading-relaxed">
                   Instalação e higienização com pontualidade e acabamento impecável
                 </p>
               </div>
 
               {/* CTAs */}
-              <div className="space-y-4 animate-fade-in" style={{ animationDelay: "200ms" }}>
+              <div className="space-y-5 animate-fade-in" style={{ animationDelay: "200ms" }}>
                 <Button
                   variant="hero"
                   size="xl"
@@ -45,21 +45,21 @@ export const FinalCTA = () => {
               </div>
 
               {/* Trust Indicators */}
-              <div className="space-y-3 pt-4 animate-fade-in" style={{ animationDelay: "400ms" }}>
-                <div className="flex items-center gap-3 text-muted-foreground">
-                  <CheckCircle className="w-5 h-5 text-primary flex-shrink-0" />
+              <div className="space-y-4 pt-6 animate-fade-in" style={{ animationDelay: "400ms" }}>
+                <div className="flex items-center gap-3 text-lg text-muted-foreground">
+                  <CheckCircle className="w-6 h-6 text-primary flex-shrink-0" />
                   <span>Atendimento em Londrina e região</span>
                 </div>
-                <div className="flex items-center gap-3 text-muted-foreground">
-                  <CheckCircle className="w-5 h-5 text-primary flex-shrink-0" />
+                <div className="flex items-center gap-3 text-lg text-muted-foreground">
+                  <CheckCircle className="w-6 h-6 text-primary flex-shrink-0" />
                   <span>Orçamento sem compromisso</span>
                 </div>
-                <div className="flex items-center gap-3 text-muted-foreground">
-                  <CheckCircle className="w-5 h-5 text-primary flex-shrink-0" />
+                <div className="flex items-center gap-3 text-lg text-muted-foreground">
+                  <CheckCircle className="w-6 h-6 text-primary flex-shrink-0" />
                   <span>Equipe treinada</span>
                 </div>
-                <div className="flex items-center gap-3 text-muted-foreground">
-                  <Clock className="w-5 h-5 text-primary flex-shrink-0" />
+                <div className="flex items-center gap-3 text-lg text-muted-foreground">
+                  <Clock className="w-6 h-6 text-primary flex-shrink-0" />
                   <span className="font-semibold text-foreground">
                     Chegamos no horário combinado
                   </span>
