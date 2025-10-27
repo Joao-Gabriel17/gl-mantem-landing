@@ -41,7 +41,7 @@ export const Testimonials = () => {
   const testimonialCards = testimonials.map((testimonial, index) => (
     <Card
       key={index}
-      className="p-8 bg-card border-border hover:border-primary/30 hover:shadow-lg transition-all duration-300 h-full flex flex-col"
+      className="p-8 bg-card border-[hsl(216_17%_22%)] hover:border-primary/30 hover:shadow-lg transition-all duration-300 h-full flex flex-col"
     >
       {/* Rating Stars */}
       <div className="flex gap-1 mb-6">
@@ -56,7 +56,7 @@ export const Testimonials = () => {
       </p>
 
       {/* Author Info */}
-      <div className="flex items-center gap-4 pt-6 border-t border-border">
+      <div className="flex items-center gap-4 pt-6 border-t border-[hsl(216_17%_22%)]">
         <img
           src={testimonial.avatar}
           alt={testimonial.name}
