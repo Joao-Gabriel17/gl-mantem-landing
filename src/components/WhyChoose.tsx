@@ -34,7 +34,7 @@ export const WhyChoose = () => {
     return (
       <div
         key={index}
-        className="group text-center space-y-6 p-8 md:p-10 rounded-2xl bg-card/50 border border-[hsl(216_17%_22%)] hover:border-primary/30 hover:bg-card transition-all duration-300 hover:shadow-lg h-full"
+        className="group text-center space-y-6 p-8 md:p-10 rounded-2xl bg-surface-700/50 border border-line-700 hover:border-primary-500/30 hover:bg-surface-700 transition-all duration-300 hover:shadow-lg h-full"
       >
         {/* Icon */}
         <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-primary/10 group-hover:bg-primary/20 transition-colors duration-300">
