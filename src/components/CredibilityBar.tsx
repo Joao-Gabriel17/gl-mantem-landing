@@ -37,12 +37,12 @@ export const CredibilityBar = () => {
         key={index}
         className="flex flex-col items-center text-center space-y-3 p-6 animate-fade-in"
       >
-        <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center">
-          <Icon className="w-7 h-7 text-primary" />
+        <div className="w-14 h-14 rounded-full bg-primary-500/10 flex items-center justify-center">
+          <Icon className="w-7 h-7 text-primary-500" />
         </div>
         <div>
-          <p className="text-sm text-muted-foreground mb-1">{item.title}</p>
-          <p className="text-base font-semibold text-foreground">{item.value}</p>
+          <p className="text-sm text-textc-300 mb-1">{item.title}</p>
+          <p className="text-base font-semibold text-textc-100">{item.value}</p>
         </div>
       </div>
     );
