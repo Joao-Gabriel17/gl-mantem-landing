@@ -10,7 +10,7 @@ export const FinalCTA = () => {
       <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 -z-10" />
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-        <Card className="bg-card/80 backdrop-blur-sm border-[hsl(216_17%_22%)] shadow-elevated overflow-hidden">
+        <Card className="bg-surface-700/80 backdrop-blur-sm border-line-700 shadow-elevated overflow-hidden">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 p-10 md:p-16">
             {/* Left Column - Content */}
             <div className="space-y-10 flex flex-col justify-center">
