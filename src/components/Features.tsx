@@ -41,7 +41,7 @@ export const Features = () => {
     return (
       <Card
         key={index}
-        className="group overflow-hidden bg-card border-border hover:border-primary/30 transition-all duration-300 hover:shadow-elevated h-full"
+        className="group overflow-hidden bg-surface-700 border-line-700 hover:border-primary-500/30 transition-all duration-300 hover:shadow-elevated h-full"
       >
         {/* Feature Image */}
         <div className="relative h-56 md:h-64 overflow-hidden">
@@ -60,10 +60,10 @@ export const Features = () => {
 
         {/* Feature Content */}
         <div className="p-8 space-y-4">
-          <h3 className="text-2xl font-bold text-foreground">
+          <h3 className="text-2xl font-bold text-textc-100">
             {feature.title}
           </h3>
-          <p className="text-lg text-muted-foreground leading-relaxed">
+          <p className="text-lg text-textc-300 leading-relaxed">
             {feature.description}
           </p>
         </div>
@@ -76,21 +76,21 @@ export const Features = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-20 md:mb-24 animate-fade-in-up">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-8">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-textc-100 mb-8">
             Nossos Serviços
           </h2>
-          <p className="text-xl md:text-2xl text-muted-foreground">
+          <p className="text-xl md:text-2xl text-textc-300">
             Soluções completas em climatização com qualidade e garantia
           </p>
         </div>
 
         {/* Main Feature Card */}
-        <Card className="p-10 md:p-16 bg-gradient-to-br from-card to-card/50 border-border mb-12 md:mb-16 hover:shadow-elevated transition-all duration-300 animate-fade-in">
+        <Card className="p-10 md:p-16 bg-gradient-to-br from-surface-700 to-surface-700/50 border-line-700 mb-12 md:mb-16 hover:shadow-elevated transition-all duration-300 animate-fade-in">
           <div className="max-w-4xl mx-auto text-center space-y-6">
-            <h3 className="text-3xl md:text-4xl font-bold text-foreground">
+            <h3 className="text-3xl md:text-4xl font-bold text-textc-100">
               {mainFeature.title}
             </h3>
-            <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed">
+            <p className="text-xl md:text-2xl text-textc-300 leading-relaxed">
               {mainFeature.description}
             </p>
           </div>

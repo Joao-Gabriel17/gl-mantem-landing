@@ -6,32 +6,31 @@ export const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navLinks = [
-    { label: "Serviços", href: "#features" },
-    { label: "Como Funciona", href: "#why-choose" },
-    { label: "Por Que Escolher", href: "#why-choose" },
-    { label: "Depoimentos", href: "#testimonials" },
-    { label: "FAQs", href: "#faq" },
+    { id: "services", label: "Serviços", href: "#features" },
+    { id: "why-choose", label: "Por Que Escolher", href: "#why-choose" },
+    { id: "testimonials", label: "Depoimentos", href: "#testimonials" },
+    { id: "faq", label: "FAQs", href: "#faq" },
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-bg-900/80 backdrop-blur-lg border-b border-line-700">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <a href="#" className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-xl">G&L</span>
+            <div className="w-10 h-10 bg-gradient-to-br from-primary-500 to-primary-600 rounded-lg flex items-center justify-center">
+              <span className="text-white font-bold text-xl">G&L</span>
             </div>
-            <span className="font-bold text-lg md:text-xl text-foreground">G&L Manutenções</span>
+            <span className="font-bold text-lg md:text-xl text-textc-100">G&L Manutenções</span>
           </a>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
             {navLinks.map((link) => (
               <a
-                key={link.href}
+                key={link.id}
                 href={link.href}
-                className="text-muted-foreground hover:text-foreground transition-colors duration-200 text-sm font-medium"
+                className="text-textc-300 hover:text-textc-100 transition-colors duration-200 text-sm font-medium"
               >
                 {link.label}
               </a>
@@ -62,14 +61,14 @@ export const Navigation = () => {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="lg:hidden bg-card border-t border-border animate-fade-in">
+        <div className="lg:hidden bg-surface-700 border-t border-line-700 animate-fade-in">
           <div className="container mx-auto px-4 py-6 space-y-4">
             {navLinks.map((link) => (
               <a
-                key={link.href}
+                key={link.id}
                 href={link.href}
                 onClick={() => setIsMenuOpen(false)}
-                className="block py-2 text-muted-foreground hover:text-foreground transition-colors duration-200"
+                className="block py-2 text-textc-300 hover:text-textc-100 transition-colors duration-200"
               >
                 {link.label}
               </a>
