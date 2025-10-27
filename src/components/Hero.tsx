@@ -14,20 +14,20 @@ export const Hero = () => {
           {/* Left Column - Content */}
           <div className="space-y-10 lg:space-y-12 animate-fade-in-up">
             {/* Achievement Badge */}
-            <Badge variant="outline" className="inline-flex items-center gap-2 px-5 py-2.5 text-sm border-primary/30 bg-primary/10">
-              <Shield className="w-4 h-4 text-primary" />
+            <Badge variant="outline" className="inline-flex items-center gap-2 px-5 py-2.5 text-sm border-primary-500/30 bg-primary-500/10">
+              <Shield className="w-4 h-4 text-primary-500" />
               Climatização de confiança em Londrina
             </Badge>
 
             {/* Headline */}
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.1] text-foreground">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.1] text-textc-100">
               Instalação e higienização de ar-condicionado com{" "}
-              <span className="text-primary">pontualidade</span> e{" "}
-              <span className="text-primary">acabamento impecável</span>
+              <span className="text-primary-500">pontualidade</span> e{" "}
+              <span className="text-primary-500">acabamento impecável</span>
             </h1>
 
             {/* Subheadline */}
-            <p className="text-xl sm:text-2xl text-muted-foreground leading-relaxed max-w-2xl">
+            <p className="text-xl sm:text-2xl text-textc-300 leading-relaxed max-w-2xl">
               Serviço profissional com garantia, equipe treinada e atendimento humanizado. 
               Respirar ar limpo e economizar energia nunca foi tão fácil.
             </p>
@@ -53,9 +53,9 @@ export const Hero = () => {
             </div>
 
             {/* Social Metrics */}
-            <div className="flex flex-wrap items-center gap-6 pt-6 text-base text-muted-foreground">
+            <div className="flex flex-wrap items-center gap-6 pt-6 text-base text-textc-300">
               <div className="flex items-center gap-2">
-                <Clock className="w-5 h-5 text-primary" />
+                <Clock className="w-5 h-5 text-primary-500" />
                 <span>Atendimento rápido em Londrina e região</span>
               </div>
               <div className="h-4 w-px bg-border hidden sm:block" />
