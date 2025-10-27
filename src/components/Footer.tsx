@@ -13,7 +13,7 @@ export const Footer = () => {
               </div>
               <span className="font-bold text-lg text-foreground">G&L Manutenções</span>
             </div>
-            <p className="text-sm text-muted-foreground">
+            <p className="text-sm text-textc-300">
               Climatização de confiança em Londrina
             </p>
           </div>
