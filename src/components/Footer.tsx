@@ -91,7 +91,7 @@ export const Footer = () => {
         </div>
 
         {/* Copyright */}
-        <div className="pt-8 border-t border-border text-center text-sm text-muted-foreground">
+        <div className="pt-8 border-t border-[hsl(216_17%_22%)] text-center text-sm text-muted-foreground">
           <p>G&L Manutenções e Reparos © 2025. Todos os direitos reservados.</p>
         </div>
       </div>
