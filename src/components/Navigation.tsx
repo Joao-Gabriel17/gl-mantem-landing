@@ -61,7 +61,7 @@ export const Navigation = () => {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="lg:hidden bg-card border-t border-[hsl(216_17%_22%)] animate-fade-in">
+        <div className="lg:hidden bg-surface-700 border-t border-line-700 animate-fade-in">
           <div className="container mx-auto px-4 py-6 space-y-4">
             {navLinks.map((link) => (
               <a
