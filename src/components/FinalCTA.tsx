@@ -5,9 +5,9 @@ import whatsappMockup from "@/assets/whatsapp-mockup.jpg";
 
 export const FinalCTA = () => {
   return (
-    <section className="py-24 md:py-40 bg-gradient-to-b from-card/20 to-background relative overflow-hidden">
+    <section className="py-24 md:py-40 bg-gradient-to-b from-surface-700/20 to-bg-900 relative overflow-hidden">
       {/* Background decoration */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 -z-10" />
+      <div className="absolute inset-0 bg-gradient-to-br from-primary-500/5 via-transparent to-accent/5 -z-10" />
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <Card className="bg-surface-700/80 backdrop-blur-sm border-line-700 shadow-elevated overflow-hidden">
