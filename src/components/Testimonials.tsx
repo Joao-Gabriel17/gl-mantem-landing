@@ -79,10 +79,10 @@ export const Testimonials = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-20 md:mb-24 animate-fade-in-up">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-8">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-textc-100 mb-8">
             O Que Dizem Nossos Clientes
           </h2>
-          <p className="text-xl md:text-2xl text-muted-foreground">
+          <p className="text-xl md:text-2xl text-textc-300">
             Depoimentos reais de quem confia no nosso trabalho
           </p>
         </div>
