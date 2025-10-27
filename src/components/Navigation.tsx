@@ -6,11 +6,11 @@ export const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navLinks = [
-    { label: "Serviços", href: "#features" },
-    { label: "Como Funciona", href: "#why-choose" },
-    { label: "Por Que Escolher", href: "#why-choose" },
-    { label: "Depoimentos", href: "#testimonials" },
-    { label: "FAQs", href: "#faq" },
+    { id: "services", label: "Serviços", href: "#features" },
+    { id: "how-it-works", label: "Como Funciona", href: "#why-choose" },
+    { id: "why-choose", label: "Por Que Escolher", href: "#why-choose" },
+    { id: "testimonials", label: "Depoimentos", href: "#testimonials" },
+    { id: "faq", label: "FAQs", href: "#faq" },
   ];
 
   return (
@@ -29,7 +29,7 @@ export const Navigation = () => {
           <div className="hidden lg:flex items-center space-x-8">
             {navLinks.map((link) => (
               <a
-                key={link.href}
+                key={link.id}
                 href={link.href}
                 className="text-muted-foreground hover:text-foreground transition-colors duration-200 text-sm font-medium"
               >
@@ -66,7 +66,7 @@ export const Navigation = () => {
           <div className="container mx-auto px-4 py-6 space-y-4">
             {navLinks.map((link) => (
               <a
-                key={link.href}
+                key={link.id}
                 href={link.href}
                 onClick={() => setIsMenuOpen(false)}
                 className="block py-2 text-muted-foreground hover:text-foreground transition-colors duration-200"
