@@ -68,7 +68,7 @@ export const Navigation = () => {
                 key={link.id}
                 href={link.href}
                 onClick={() => setIsMenuOpen(false)}
-                className="block py-2 text-muted-foreground hover:text-foreground transition-colors duration-200"
+                className="block py-2 text-textc-300 hover:text-textc-100 transition-colors duration-200"
               >
                 {link.label}
               </a>
