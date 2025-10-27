@@ -85,7 +85,7 @@ export const Features = () => {
         </div>
 
         {/* Main Feature Card */}
-        <Card className="p-10 md:p-16 bg-gradient-to-br from-card to-card/50 border-[hsl(216_17%_22%)] mb-12 md:mb-16 hover:shadow-elevated transition-all duration-300 animate-fade-in">
+        <Card className="p-10 md:p-16 bg-gradient-to-br from-surface-700 to-surface-700/50 border-line-700 mb-12 md:mb-16 hover:shadow-elevated transition-all duration-300 animate-fade-in">
           <div className="max-w-4xl mx-auto text-center space-y-6">
             <h3 className="text-3xl md:text-4xl font-bold text-foreground">
               {mainFeature.title}
