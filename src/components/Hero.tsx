@@ -23,7 +23,7 @@ export const Hero = () => {
             <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.1] text-foreground">
               Instalação e higienização de ar-condicionado com{" "}
               <span className="text-primary">pontualidade</span> e{" "}
-              <span className="text-accent">acabamento impecável</span>
+              <span className="text-primary">acabamento impecável</span>
             </h1>
 
             {/* Subheadline */}
