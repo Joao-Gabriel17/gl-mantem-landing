@@ -9,14 +9,14 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground hover:bg-[hsl(18_100%_45%)] active:bg-[hsl(18_100%_40%)] rounded-[12px] px-4 py-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[hsl(18_100%_50%)] focus-visible:shadow-[0_0_0_6px_rgba(255,122,0,0.18)]",
+        default: "bg-primary-500 text-white hover:bg-primary-600 active:bg-primary-700 rounded-xl px-5 py-3 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-0",
         destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90",
         outline: "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
-        secondary: "border border-primary text-primary hover:bg-[rgba(255,122,0,0.08)] active:border-[hsl(18_100%_45%)] active:text-[hsl(18_100%_45%)] rounded-[12px] px-4 py-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2",
+        secondary: "border border-primary-500 text-primary-500 hover:bg-[rgba(255,122,0,0.08)] rounded-xl px-5 py-3 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-0",
         ghost: "hover:bg-accent hover:text-accent-foreground",
-        link: "text-primary underline-offset-4 hover:underline",
-        hero: "bg-primary text-primary-foreground hover:bg-[hsl(18_100%_45%)] active:bg-[hsl(18_100%_40%)] font-semibold rounded-[14px] px-6 py-4 shadow-lg hover:shadow-[0_0_24px_rgba(255,122,0,0.3)] transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[hsl(18_100%_50%)] focus-visible:shadow-[0_0_0_6px_rgba(255,122,0,0.18)]",
-        "hero-outline": "border-2 border-foreground/20 bg-card/50 backdrop-blur-sm text-foreground hover:bg-card hover:border-primary/50 font-semibold rounded-[14px] px-6 py-4 transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2",
+        link: "text-primary-500 underline-offset-4 hover:underline",
+        hero: "bg-primary-500 text-white hover:bg-primary-600 active:bg-primary-700 font-semibold rounded-xl px-6 py-4 shadow-lg hover:shadow-[0_0_24px_rgba(255,122,0,0.3)] transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-0",
+        "hero-outline": "border-2 border-textc-100/20 bg-surface-700/50 backdrop-blur-sm text-textc-100 hover:bg-surface-700 hover:border-primary-500/50 font-semibold rounded-xl px-6 py-4 transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-0",
       },
       size: {
         default: "h-10",
