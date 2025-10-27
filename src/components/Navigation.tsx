@@ -30,7 +30,7 @@ export const Navigation = () => {
               <a
                 key={link.id}
                 href={link.href}
-                className="text-muted-foreground hover:text-foreground transition-colors duration-200 text-sm font-medium"
+                className="text-textc-300 hover:text-textc-100 transition-colors duration-200 text-sm font-medium"
               >
                 {link.label}
               </a>
