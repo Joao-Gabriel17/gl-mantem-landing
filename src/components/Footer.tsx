@@ -2,7 +2,7 @@ import { Instagram, Phone } from "lucide-react";
 
 export const Footer = () => {
   return (
-    <footer className="bg-[hsl(216_31%_15%)] border-t border-[hsl(216_17%_22%)] py-16 md:py-20">
+    <footer className="bg-bg-800 border-t border-line-700 py-16 md:py-20">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           {/* Company Info */}
