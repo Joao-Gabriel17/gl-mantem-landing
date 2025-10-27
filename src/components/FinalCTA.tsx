@@ -46,21 +46,21 @@ export const FinalCTA = () => {
 
               {/* Trust Indicators */}
               <div className="space-y-4 pt-6 animate-fade-in" style={{ animationDelay: "400ms" }}>
-                <div className="flex items-center gap-3 text-lg text-muted-foreground">
-                  <CheckCircle className="w-6 h-6 text-primary flex-shrink-0" />
+                <div className="flex items-center gap-3 text-lg text-textc-300">
+                  <CheckCircle className="w-6 h-6 text-primary-500 flex-shrink-0" />
                   <span>Atendimento em Londrina e região</span>
                 </div>
-                <div className="flex items-center gap-3 text-lg text-muted-foreground">
-                  <CheckCircle className="w-6 h-6 text-primary flex-shrink-0" />
+                <div className="flex items-center gap-3 text-lg text-textc-300">
+                  <CheckCircle className="w-6 h-6 text-primary-500 flex-shrink-0" />
                   <span>Orçamento sem compromisso</span>
                 </div>
-                <div className="flex items-center gap-3 text-lg text-muted-foreground">
-                  <CheckCircle className="w-6 h-6 text-primary flex-shrink-0" />
+                <div className="flex items-center gap-3 text-lg text-textc-300">
+                  <CheckCircle className="w-6 h-6 text-primary-500 flex-shrink-0" />
                   <span>Equipe treinada</span>
                 </div>
-                <div className="flex items-center gap-3 text-lg text-muted-foreground">
-                  <Clock className="w-6 h-6 text-primary flex-shrink-0" />
-                  <span className="font-semibold text-foreground">
+                <div className="flex items-center gap-3 text-lg text-textc-300">
+                  <Clock className="w-6 h-6 text-primary-500 flex-shrink-0" />
+                  <span className="font-semibold text-textc-100">
                     Chegamos no horário combinado
                   </span>
                 </div>
