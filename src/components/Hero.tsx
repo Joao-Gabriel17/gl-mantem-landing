@@ -1,0 +1,84 @@
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { Clock, Shield } from "lucide-react";
+import heroImage from "@/assets/hero-ac-installation.jpg";
+
+export const Hero = () => {
+  return (
+    <section className="relative min-h-screen flex items-center pt-20 md:pt-24 pb-16 overflow-hidden">
+      {/* Background gradient */}
+      <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-card -z-10" />
+      
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          {/* Left Column - Content */}
+          <div className="space-y-8 animate-fade-in-up">
+            {/* Achievement Badge */}
+            <Badge variant="outline" className="inline-flex items-center gap-2 px-4 py-2 text-sm border-primary/30 bg-primary/10">
+              <Shield className="w-4 h-4 text-primary" />
+              Climatização de confiança em Londrina
+            </Badge>
+
+            {/* Headline */}
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight text-foreground">
+              Instalação e higienização de ar-condicionado com{" "}
+              <span className="text-primary">pontualidade</span> e{" "}
+              <span className="text-accent">acabamento impecável</span>
+            </h1>
+
+            {/* Subheadline */}
+            <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed max-w-2xl">
+              Serviço profissional com garantia, equipe treinada e atendimento humanizado. 
+              Respirar ar limpo e economizar energia nunca foi tão fácil.
+            </p>
+
+            {/* CTAs */}
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Button
+                variant="hero"
+                size="xl"
+                onClick={() => window.open("https://wa.me/5543984910234", "_blank")}
+                className="w-full sm:w-auto"
+              >
+                Chamar no WhatsApp
+              </Button>
+              <Button
+                variant="hero-outline"
+                size="xl"
+                onClick={() => window.open("https://wa.me/5543984910234", "_blank")}
+                className="w-full sm:w-auto"
+              >
+                Agendar visita/Orçamento
+              </Button>
+            </div>
+
+            {/* Social Metrics */}
+            <div className="flex flex-wrap items-center gap-6 pt-4 text-sm text-muted-foreground">
+              <div className="flex items-center gap-2">
+                <Clock className="w-5 h-5 text-primary" />
+                <span>Atendimento rápido em Londrina e região</span>
+              </div>
+              <div className="h-4 w-px bg-border hidden sm:block" />
+              <span>Orçamento sem compromisso</span>
+            </div>
+          </div>
+
+          {/* Right Column - Image */}
+          <div className="relative animate-fade-in">
+            <div className="relative rounded-2xl overflow-hidden shadow-elevated">
+              <img
+                src={heroImage}
+                alt="Técnico profissional instalando ar-condicionado com precisão"
+                className="w-full h-auto object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/20 to-transparent" />
+            </div>
+            
+            {/* Floating decoration */}
+            <div className="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-primary/10 rounded-full blur-3xl animate-float" />
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
