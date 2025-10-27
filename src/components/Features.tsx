@@ -41,7 +41,7 @@ export const Features = () => {
     return (
       <Card
         key={index}
-        className="group overflow-hidden bg-card border-border hover:border-primary/30 transition-all duration-300 hover:shadow-elevated h-full"
+        className="group overflow-hidden bg-card border-[hsl(216_17%_22%)] hover:border-primary/30 transition-all duration-300 hover:shadow-elevated h-full"
       >
         {/* Feature Image */}
         <div className="relative h-56 md:h-64 overflow-hidden">
@@ -85,7 +85,7 @@ export const Features = () => {
         </div>
 
         {/* Main Feature Card */}
-        <Card className="p-10 md:p-16 bg-gradient-to-br from-card to-card/50 border-border mb-12 md:mb-16 hover:shadow-elevated transition-all duration-300 animate-fade-in">
+        <Card className="p-10 md:p-16 bg-gradient-to-br from-card to-card/50 border-[hsl(216_17%_22%)] mb-12 md:mb-16 hover:shadow-elevated transition-all duration-300 animate-fade-in">
           <div className="max-w-4xl mx-auto text-center space-y-6">
             <h3 className="text-3xl md:text-4xl font-bold text-foreground">
               {mainFeature.title}
