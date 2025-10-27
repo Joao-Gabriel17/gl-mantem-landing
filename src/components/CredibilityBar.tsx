@@ -49,7 +49,7 @@ export const CredibilityBar = () => {
   });
 
   return (
-    <section className="py-16 md:py-20 bg-card/50 border-y border-border">
+    <section className="py-16 md:py-20 bg-card/50 border-y border-[hsl(216_17%_22%)]">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <AutoCarousel autoplayDelay={3500}>
           {credentialItems}
