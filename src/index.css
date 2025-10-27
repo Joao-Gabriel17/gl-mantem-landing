@@ -8,22 +8,33 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* HVAC Brand Dark Professional Theme */
+    /* HVAC Brand Color Palette - Hex tokens */
+    --primary-500: #FF7A00;
+    --primary-600: #E56E00;
+    --primary-700: #CC6200;
+    --bg-900: #0F1115;
+    --bg-800: #171A1F;
+    --surface-700: #1F242B;
+    --text-100: #F5F7FA;
+    --text-300: #D6D9DF;
+    --line-700: #2A2F37;
+
+    /* HVAC Brand Dark Professional Theme - HSL for shadcn compat */
 
     /* Background colors */
     --background: 222 47% 11%;
-    --bg-800: 216 31% 15%;
-    --surface-700: 220 24% 18%;
+    --bg-800-hsl: 216 31% 15%;
+    --surface-700-hsl: 220 24% 18%;
 
     /* Text colors */
     --foreground: 216 30% 97%;
-    --text-100: 216 30% 97%;
-    --text-300: 216 17% 86%;
+    --text-100-hsl: 216 30% 97%;
+    --text-300-hsl: 216 17% 86%;
 
     /* Primary colors - Orange */
     --primary: 18 100% 50%;
-    --primary-600: 18 100% 45%;
-    --primary-700: 18 100% 40%;
+    --primary-600-hsl: 18 100% 45%;
+    --primary-700-hsl: 18 100% 40%;
     --primary-foreground: 0 0% 100%;
 
     /* Secondary & supporting */
