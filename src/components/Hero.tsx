@@ -5,9 +5,9 @@ import heroImage from "@/assets/hero-ac-installation.jpg";
 
 export const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center pt-24 md:pt-32 pb-20 md:pb-32 overflow-hidden">
-      {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-card -z-10" />
+    <section className="relative min-h-screen flex items-center pt-24 md:pt-32 pb-20 md:pb-32 overflow-hidden bg-background">
+      {/* Background gradient overlay */}
+      <div className="absolute inset-0 -z-10" style={{background: "linear-gradient(135deg, rgba(255, 122, 0, 0.06) 0%, rgba(229, 110, 0, 0) 60%)"}} />
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
