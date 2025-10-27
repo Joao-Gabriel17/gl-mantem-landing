@@ -41,7 +41,7 @@ export const Features = () => {
     return (
       <Card
         key={index}
-        className="group overflow-hidden bg-card border-[hsl(216_17%_22%)] hover:border-primary/30 transition-all duration-300 hover:shadow-elevated h-full"
+        className="group overflow-hidden bg-surface-700 border-line-700 hover:border-primary-500/30 transition-all duration-300 hover:shadow-elevated h-full"
       >
         {/* Feature Image */}
         <div className="relative h-56 md:h-64 overflow-hidden">
