@@ -8,10 +8,10 @@ export const Footer = () => {
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-xl">G&L</span>
+              <div className="w-10 h-10 bg-gradient-to-br from-primary-500 to-primary-600 rounded-lg flex items-center justify-center">
+                <span className="text-white font-bold text-xl">G&L</span>
               </div>
-              <span className="font-bold text-lg text-foreground">G&L Manutenções</span>
+              <span className="font-bold text-lg text-textc-100">G&L Manutenções</span>
             </div>
             <p className="text-sm text-textc-300">
               Climatização de confiança em Londrina
@@ -23,7 +23,7 @@ export const Footer = () => {
             <h3 className="font-semibold text-textc-100">Contato</h3>
             <div className="space-y-2 text-sm text-textc-300">
               <div className="flex items-center gap-2">
-                <Phone className="w-4 h-4 text-primary" />
+                <Phone className="w-4 h-4 text-primary-500" />
                 <a
                   href="https://wa.me/5543984910234"
                   target="_blank"
