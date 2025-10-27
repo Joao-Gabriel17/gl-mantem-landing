@@ -18,10 +18,10 @@ export const Navigation = () => {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <a href="#" className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-xl">G&L</span>
+            <div className="w-10 h-10 bg-gradient-to-br from-primary-500 to-primary-600 rounded-lg flex items-center justify-center">
+              <span className="text-white font-bold text-xl">G&L</span>
             </div>
-            <span className="font-bold text-lg md:text-xl text-foreground">G&L Manutenções</span>
+            <span className="font-bold text-lg md:text-xl text-textc-100">G&L Manutenções</span>
           </a>
 
           {/* Desktop Navigation */}
