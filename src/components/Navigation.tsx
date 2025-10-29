@@ -7,7 +7,6 @@ export const Navigation = () => {
 
   const navLinks = [
     { id: "services", label: "Serviços", href: "#features" },
-    { id: "why-choose", label: "Por Que Escolher", href: "#why-choose" },
     { id: "testimonials", label: "Depoimentos", href: "#testimonials" },
     { id: "faq", label: "FAQs", href: "#faq" },
   ];

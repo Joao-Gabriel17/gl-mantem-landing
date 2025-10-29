@@ -14,24 +14,24 @@ export const Features = () => {
 
   const secondaryFeatures = [
     {
-      icon: Wind,
-      title: "Ar Limpo e Saudável",
-      description:
-        "Remove ácaros, fungos e bactérias, elimina mau cheiro e melhora a qualidade do ar. Gera eficiência e economia na conta.",
-      image: cleanAirImage,
-    },
-    {
       icon: Sparkles,
-      title: "Instalação Profissional",
+      title: "Instalação sem gambiarra",
       description:
-        "Nível, dreno oculto e isolamento térmico corretos para alto desempenho e estética limpa. Segurança elétrica e fixação reforçada.",
+        "• Dreno oculto e nível perfeito para máximo desempenho\n• Isolamento térmico correto - economia de até 30% na conta\n• Fixação reforçada e segurança elétrica garantida",
       image: professionalInstallImage,
     },
     {
-      icon: Wrench,
-      title: "Manutenção Preventiva",
+      icon: Wind,
+      title: "Higienização que você sente a diferença",
       description:
-        "Evita falhas e aumenta a vida útil do equipamento, no verão e no inverno. Agendamento flexível e pontualidade garantida.",
+        "• Elimina ácaros, fungos e mau cheiro - respire melhor\n• Reduz consumo de energia e aumenta vida útil do aparelho\n• Produtos profissionais, ambiente protegido durante o serviço",
+      image: cleanAirImage,
+    },
+    {
+      icon: Wrench,
+      title: "Manutenção que evita surpresas",
+      description:
+        "• Previne falhas no verão e no inverno\n• Aumenta vida útil do seu equipamento em até 50%\n• Agendamento flexível - atendemos no seu horário",
       image: maintenanceImage,
     },
   ];
@@ -63,9 +63,9 @@ export const Features = () => {
           <h3 className="text-2xl font-bold text-textc-100">
             {feature.title}
           </h3>
-          <p className="text-lg text-textc-300 leading-relaxed">
+          <div className="text-lg text-textc-300 leading-relaxed whitespace-pre-line">
             {feature.description}
-          </p>
+          </div>
         </div>
       </Card>
     );

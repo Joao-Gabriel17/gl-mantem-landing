@@ -5,27 +5,27 @@ export const WhyChoose = () => {
   const pillars = [
     {
       icon: Clock,
-      title: "Pontualidade e horário flexível",
+      title: "Pontualidade real",
       description:
-        "Chegamos no horário combinado e atendemos no seu melhor horário, sem travar sua rotina.",
+        "Chegamos no horário combinado e respeitamos sua rotina - sem você ficar esperando o dia todo.",
     },
     {
       icon: Wrench,
-      title: "Instalação profissional, sem gambiarra",
+      title: "Instalação sem improviso",
       description:
-        "Nível, dreno oculto e isolamento correto garantem desempenho, estética e economia.",
+        "Nível, dreno e isolamento corretos = mais economia, zero goteira, acabamento que não envergonha.",
     },
     {
       icon: Heart,
-      title: "Saúde e eficiência",
+      title: "Higienização que funciona",
       description:
-        "Higienização que elimina ácaros/fungos, melhora a qualidade do ar e reduz o consumo de energia.",
+        "Método profissional que elimina ácaros e fungos de verdade, não só limpa por cima.",
     },
     {
       icon: MessageCircle,
-      title: "Atendimento humanizado com garantia",
+      title: "Suporte humanizado",
       description:
-        "Suporte rápido no WhatsApp, equipe treinada e serviço com garantia e pós-venda.",
+        "Atendimento rápido no WhatsApp, equipe treinada e garantia de 90 dias com pós-venda que responde.",
     },
   ];
 

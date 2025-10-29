@@ -16,20 +16,19 @@ export const Hero = () => {
             {/* Achievement Badge */}
             <Badge variant="outline" className="inline-flex items-center gap-2 px-5 py-2.5 text-sm border-primary-500/30 bg-primary-500/10">
               <Shield className="w-4 h-4 text-primary-500" />
-              Climatização de confiança em Londrina
+              Certificação NR10 • +350 clientes em Londrina
             </Badge>
 
             {/* Headline */}
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.1] text-textc-100">
-              Instalação e higienização de ar-condicionado com{" "}
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold leading-[1.1] text-textc-100">
+              Ar-condicionado instalado com{" "}
               <span className="text-primary-500">pontualidade</span> e{" "}
               <span className="text-accent-amber-400">acabamento impecável</span>
             </h1>
 
             {/* Subheadline */}
             <p className="text-xl sm:text-2xl text-textc-300 leading-relaxed max-w-2xl">
-              Serviço profissional com garantia, equipe treinada e atendimento humanizado. 
-              Respirar ar limpo e economizar energia nunca foi tão fácil.
+              Equipe certificada em Londrina e região. Higienização profissional que elimina ácaros, reduz consumo de energia e melhora sua saúde. Orçamento em até 2 horas.
             </p>
 
             {/* CTAs */}
@@ -37,29 +36,66 @@ export const Hero = () => {
               <Button
                 variant="hero"
                 size="xl"
-                onClick={() => window.open("https://wa.me/5543984910234", "_blank")}
+                onClick={() => {
+                  window.open("https://wa.me/5543984910234", "_blank");
+                  if (typeof window !== 'undefined' && (window as any).gtag) {
+                    (window as any).gtag('event', 'click_whatsapp_hero', {
+                      'event_category': 'conversion',
+                      'event_label': 'hero_primary_cta',
+                      'value': 1
+                    });
+                  }
+                }}
                 className="w-full sm:w-auto"
               >
-                Chamar no WhatsApp
+                Pedir orçamento no WhatsApp
               </Button>
               <Button
                 variant="hero-outline"
                 size="xl"
-                onClick={() => window.open("https://wa.me/5543984910234", "_blank")}
+                onClick={() => {
+                  const featuresSection = document.getElementById('features');
+                  if (featuresSection) {
+                    featuresSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                  }
+                }}
                 className="w-full sm:w-auto"
               >
-                Agendar visita/Orçamento
+                Ver nossos serviços
               </Button>
             </div>
 
-            {/* Social Metrics */}
-            <div className="flex flex-wrap items-center gap-6 pt-6 text-base text-textc-300">
-              <div className="flex items-center gap-2">
-                <Clock className="w-5 h-5 text-primary-500" />
-                <span>Atendimento rápido em Londrina e região</span>
+            {/* Trust line */}
+            <div className="space-y-3 pt-6">
+              <div className="flex flex-wrap items-center gap-4 text-base text-textc-300">
+                <div className="flex items-center gap-2">
+                  <Clock className="w-5 h-5 text-primary-500" />
+                  <span>Atendemos hoje em Londrina, Cambé, Ibiporã, Rolândia e região</span>
+                </div>
               </div>
-              <div className="h-4 w-px bg-border hidden sm:block" />
-              <span>Orçamento sem compromisso</span>
+              <div className="flex flex-wrap items-center gap-4 text-base text-textc-300">
+                <span>✓ Orçamento sem compromisso</span>
+                <div className="h-4 w-px bg-border hidden sm:block" />
+                <span>✓ Garantia de 90 dias</span>
+                <div className="h-4 w-px bg-border hidden sm:block" />
+                <a 
+                  href="https://www.google.com/search?q=G%26L+Manuten%C3%A7%C3%B5es" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-primary-500 hover:text-primary-600 transition-colors font-semibold"
+                  onClick={() => {
+                    if (typeof window !== 'undefined' && (window as any).gtag) {
+                      (window as any).gtag('event', 'view_reviews', {
+                        'event_category': 'social_proof',
+                        'event_label': 'google_reviews_link',
+                        'value': 1
+                      });
+                    }
+                  }}
+                >
+                  4,9★ - Ver 32 avaliações no Google
+                </a>
+              </div>
             </div>
           </div>
 

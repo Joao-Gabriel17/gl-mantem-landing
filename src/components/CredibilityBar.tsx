@@ -6,27 +6,27 @@ export const CredibilityBar = () => {
     {
       icon: Star,
       title: "Avaliações Google",
-      value: "Nota 4,9 / 32 reviews",
+      value: "4,9★ / 32 reviews",
     },
     {
       icon: Shield,
       title: "Garantia de serviço",
-      value: "90 dias de garantia",
+      value: "90 dias garantidos",
     },
     {
       icon: Zap,
-      title: "NR10",
-      value: "Equipe treinada",
+      title: "Certificação NR10",
+      value: "Equipe certificada",
     },
     {
       icon: Clock,
       title: "Pontualidade",
-      value: "Comprovada",
+      value: "98% no horário",
     },
     {
       icon: CheckCircle,
-      title: "WhatsApp Business",
-      value: "Atendimento ágil",
+      title: "Resposta rápida",
+      value: "WhatsApp em 30min",
     },
   ];
 

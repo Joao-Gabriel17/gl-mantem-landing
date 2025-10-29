@@ -16,10 +16,10 @@ export const FinalCTA = () => {
             <div className="space-y-10 flex flex-col justify-center">
               <div className="space-y-6 animate-fade-in-up">
                 <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-textc-100 leading-tight">
-                  Respire ar limpo hoje
+                  Respire ar limpo hoje mesmo
                 </h2>
                 <p className="text-2xl text-textc-300 leading-relaxed">
-                  Instalação e higienização com pontualidade e acabamento impecável
+                  Atendimento rápido em Londrina e região. Orçamento sem compromisso em até 2 horas. Chegamos no horário combinado.
                 </p>
               </div>
 
@@ -28,7 +28,16 @@ export const FinalCTA = () => {
                 <Button
                   variant="hero"
                   size="xl"
-                  onClick={() => window.open("https://wa.me/5543984910234", "_blank")}
+                  onClick={() => {
+                    window.open("https://wa.me/5543984910234", "_blank");
+                    if (typeof window !== 'undefined' && (window as any).gtag) {
+                      (window as any).gtag('event', 'click_whatsapp_final', {
+                        'event_category': 'conversion',
+                        'event_label': 'final_cta',
+                        'value': 1
+                      });
+                    }
+                  }}
                   className="w-full justify-center"
                 >
                   <Phone className="w-5 h-5 mr-2" />
@@ -37,10 +46,19 @@ export const FinalCTA = () => {
                 <Button
                   variant="hero-outline"
                   size="xl"
-                  onClick={() => window.open("https://wa.me/5543984910234", "_blank")}
+                  onClick={() => {
+                    window.open("https://wa.me/5543984910234", "_blank");
+                    if (typeof window !== 'undefined' && (window as any).gtag) {
+                      (window as any).gtag('event', 'click_whatsapp_final', {
+                        'event_category': 'conversion',
+                        'event_label': 'final_cta_secondary',
+                        'value': 1
+                      });
+                    }
+                  }}
                   className="w-full justify-center"
                 >
-                  Agendar visita / orçamento
+                  Agendar visita técnica gratuita
                 </Button>
               </div>
 
@@ -48,20 +66,20 @@ export const FinalCTA = () => {
               <div className="space-y-4 pt-6 animate-fade-in" style={{ animationDelay: "400ms" }}>
                 <div className="flex items-center gap-3 text-lg text-textc-300">
                   <CheckCircle className="w-6 h-6 text-primary-500 flex-shrink-0" />
-                  <span>Atendimento em Londrina e região</span>
+                  <span>Atendemos hoje em Londrina, Cambé, Ibiporã e região</span>
                 </div>
                 <div className="flex items-center gap-3 text-lg text-textc-300">
                   <CheckCircle className="w-6 h-6 text-primary-500 flex-shrink-0" />
-                  <span>Orçamento sem compromisso</span>
+                  <span>Orçamento grátis e sem compromisso</span>
                 </div>
                 <div className="flex items-center gap-3 text-lg text-textc-300">
                   <CheckCircle className="w-6 h-6 text-primary-500 flex-shrink-0" />
-                  <span>Equipe treinada</span>
+                  <span>Equipe certificada NR10</span>
                 </div>
                 <div className="flex items-center gap-3 text-lg text-textc-300">
                   <Clock className="w-6 h-6 text-primary-500 flex-shrink-0" />
                   <span className="font-semibold text-textc-100">
-                    Chegamos no horário combinado
+                    Garantia de 90 dias
                   </span>
                 </div>
               </div>

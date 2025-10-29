@@ -8,24 +8,34 @@ import {
 export const FAQ = () => {
   const faqs = [
     {
-      question: "De quanto em quanto tempo devo higienizar o ar-condicionado?",
+      question: "De quanto em quanto tempo devo higienizar?",
       answer:
-        "Residencial: a cada 6 meses (ou antes, se houver alergias/pets). Comercial/intenso: 3–4 meses. Limpeza de filtros pode ser mensal.",
+        "Residencial: a cada 6 meses (ou antes se tiver alergias/pets). Comercial: 3-4 meses. A limpeza regular reduz consumo de energia e melhora a qualidade do ar que você respira.",
     },
     {
-      question: "Quanto tempo leva a instalação ou a higienização?",
+      question: "Quanto tempo leva a instalação ou higienização?",
       answer:
-        "Instalação: em média 3–6h por aparelho (varia por BTUs/infra). Higienização: 60–90min por aparelho, com proteção do ambiente.",
+        "Instalação: 3-6h por aparelho (depende dos BTUs). Higienização: 60-90 min por aparelho. Protegemos o ambiente e deixamos tudo limpo. Você volta para casa e já está tudo pronto.",
     },
     {
-      question: "Vocês atendem quais regiões e qual o prazo?",
+      question: "Vocês atendem onde e em quanto tempo?",
       answer:
-        "Londrina e região. Agendamento rápido e pontualidade no horário combinado. Janelas de atendimento flexíveis conforme sua disponibilidade.",
+        "Londrina, Cambé, Ibiporã, Rolândia, Arapongas e região. Agendamento rápido - geralmente atendemos em 24-48h. Chegamos no horário combinado (sem aquela janela de 4 horas).",
     },
     {
-      question: "Existe garantia e quais as formas de pagamento?",
+      question: "Tem garantia? Quais formas de pagamento?",
       answer:
-        "Garantia sobre o serviço executado e respeito à garantia do fabricante. Formas de pagamento definidas no orçamento (ex.: PIX/cartão).",
+        "Sim, 90 dias de garantia sobre o serviço executado. Respeitamos a garantia do fabricante. Pagamento: PIX, cartão, definido no orçamento. Orçamento sempre sem compromisso.",
+    },
+    {
+      question: "O que está incluído na higienização?",
+      answer:
+        "Limpeza completa de filtros, serpentina, gabinete, dreno e ventilador. Remoção de ácaros, fungos e bactérias. Aplicação de produtos profissionais. Teste de funcionamento e medição de temperatura. Você sente a diferença no cheiro e no frescor.",
+    },
+    {
+      question: "E se o aparelho tiver problema depois?",
+      answer:
+        "Garantia de 90 dias cobre qualquer problema relacionado ao nosso serviço. Atendimento rápido via WhatsApp. Se precisar, voltamos sem custo adicional (dentro da garantia).",
     },
   ];
 

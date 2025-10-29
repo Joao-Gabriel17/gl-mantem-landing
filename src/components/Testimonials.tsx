@@ -10,31 +10,31 @@ export const Testimonials = () => {
   const testimonials = [
     {
       name: "Antero de Castro Moreira",
-      location: "Brasil (Londrina-PR)",
+      location: "Londrina-PR",
       avatar: avatar1,
       rating: 5,
-      text: "Uma ótima empresa de manutenção em componentes hidráulicos com qualidade, prazo e preço justo.",
+      text: "Qualidade, prazo e preço justo. Recomendo sem dúvida.",
     },
     {
       name: "Leandro Marcondes",
-      location: "Brasil (Londrina-PR)",
+      location: "Londrina-PR",
       avatar: avatar2,
       rating: 5,
-      text: "GL excelentes profissionais serviço de qualidade. Bruno super educado estão de parabéns",
+      text: "Profissionais excelentes, serviço de qualidade. Bruno super educado, estão de parabéns!",
     },
     {
       name: "Osok Brasil",
-      location: "Brasil (Londrina-PR)",
+      location: "Londrina-PR",
       avatar: avatar3,
       rating: 5,
-      text: "Profissionais em tudo. Parabéns!",
+      text: "Profissionais em tudo. Parabéns pelo trabalho!",
     },
     {
       name: "Giovanni Toffoletto",
-      location: "Brasil (Londrina-PR)",
+      location: "Londrina-PR",
       avatar: avatar4,
       rating: 5,
-      text: "Recomendo o serviço. Bom preço e qualidade",
+      text: "Recomendo! Bom preço e qualidade de verdade.",
     },
   ];
 
@@ -91,6 +91,28 @@ export const Testimonials = () => {
         <AutoCarousel autoplayDelay={5000}>
           {testimonialCards}
         </AutoCarousel>
+
+        {/* Google Reviews Link */}
+        <div className="text-center mt-12 animate-fade-in">
+          <a 
+            href="https://www.google.com/search?q=G%26L+Manuten%C3%A7%C3%B5es" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-xl text-primary-500 hover:text-primary-600 transition-colors font-semibold"
+            onClick={() => {
+              if (typeof window !== 'undefined' && (window as any).gtag) {
+                (window as any).gtag('event', 'view_reviews', {
+                  'event_category': 'social_proof',
+                  'event_label': 'testimonials_google_link',
+                  'value': 1
+                });
+              }
+            }}
+          >
+            <Star className="w-6 h-6 fill-primary-500 text-primary-500" />
+            4,9★ no Google • Ver todas as 32 avaliações →
+          </a>
+        </div>
       </div>
     </section>
   );

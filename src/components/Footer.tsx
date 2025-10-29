@@ -29,46 +29,48 @@ export const Footer = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-primary-500 transition-colors"
+                  onClick={() => {
+                    if (typeof window !== 'undefined' && (window as any).gtag) {
+                      (window as any).gtag('event', 'click_phone_footer', {
+                        'event_category': 'engagement',
+                        'event_label': 'footer_contact',
+                        'value': 1
+                      });
+                    }
+                  }}
                 >
                   (43) 98491-0234
                 </a>
               </div>
-              <div className="flex items-center gap-2">
-                <Phone className="w-4 h-4 text-primary-500" />
-                <a
-                  href="https://wa.me/5543991497628"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-primary-500 transition-colors"
-                >
-                  (43) 99149-7628
-                </a>
-              </div>
-              <p className="text-textc-300">Londrina e região</p>
+              <p className="text-textc-300 mt-3 font-semibold">Cidades atendidas:</p>
+              <p className="text-textc-300 leading-relaxed">
+                Londrina • Cambé • Ibiporã<br />
+                Rolândia • Arapongas
+              </p>
             </div>
           </div>
 
           {/* Quick Links */}
           <div className="space-y-4">
-            <h3 className="font-semibold text-textc-100">Links Úteis</h3>
+            <h3 className="font-semibold text-textc-100">Navegação</h3>
             <div className="space-y-2 text-sm">
               <a
-                href="#"
-                className="block text-textc-300 hover:text-primary-500 transition-colors"
+                href="#features"
+                className="block text-textc-300 hover:text-primary-500 transition-colors py-1"
               >
-                Orçamento sem compromisso
+                Nossos Serviços
               </a>
               <a
-                href="#"
-                className="block text-textc-300 hover:text-primary-500 transition-colors"
+                href="#testimonials"
+                className="block text-textc-300 hover:text-primary-500 transition-colors py-1"
               >
-                Termos de Serviço
+                Depoimentos
               </a>
               <a
-                href="#"
-                className="block text-textc-300 hover:text-primary-500 transition-colors"
+                href="#faq"
+                className="block text-textc-300 hover:text-primary-500 transition-colors py-1"
               >
-                Política de Privacidade
+                Perguntas Frequentes
               </a>
             </div>
           </div>
