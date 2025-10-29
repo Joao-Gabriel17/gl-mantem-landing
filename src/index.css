@@ -18,6 +18,9 @@ All colors MUST be HSL.
     --text-100: #F5F7FA;
     --text-300: #D6D9DF;
     --line-700: #2A2F37;
+    --accent-amber-500: #FFA000; /* base */
+    --accent-amber-600: #E69000; /* hover */
+    --accent-amber-700: #CC8400; /* active */
 
     /* HVAC Brand Dark Professional Theme - HSL for shadcn compat */
 
