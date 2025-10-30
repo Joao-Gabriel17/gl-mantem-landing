@@ -1,5 +1,5 @@
 import React from "react";
-import { buildWhatsAppLink, WHATSAPP_PRIMARY, DEFAULT_WA_MSG } from "@/lib/whatsapp";
+import { buildWaLink, WHATSAPP_PRIMARY, DEFAULT_WA_MSG } from "@/lib/whatsapp";
 
 type Props = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
   phone?: string;
@@ -12,7 +12,7 @@ export function WhatsAppLink({
   children,
   ...props
 }: Props) {
-  const href = buildWhatsAppLink(phone, message);
+  const href = buildWaLink(phone, message);
   return (
     <a
       href={href}
