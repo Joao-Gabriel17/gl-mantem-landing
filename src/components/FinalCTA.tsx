@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { CheckCircle, Clock, Phone } from "lucide-react";
 import whatsappMockup from "@/assets/whatsapp-mockup.jpg";
+import { trackEvent } from "@/lib/analytics";
 
 export const FinalCTA = () => {
   return (
@@ -30,13 +31,11 @@ export const FinalCTA = () => {
                   size="xl"
                   onClick={() => {
                     window.open("https://wa.me/5543984910234", "_blank");
-                    if (typeof window !== 'undefined' && (window as any).gtag) {
-                      (window as any).gtag('event', 'click_whatsapp_final', {
-                        'event_category': 'conversion',
-                        'event_label': 'final_cta',
-                        'value': 1
-                      });
-                    }
+                    trackEvent("click_whatsapp_final", {
+                      event_category: "conversion",
+                      event_label: "final_cta",
+                      value: 1,
+                    });
                   }}
                   className="w-full justify-center"
                 >
@@ -48,13 +47,11 @@ export const FinalCTA = () => {
                   size="xl"
                   onClick={() => {
                     window.open("https://wa.me/5543984910234", "_blank");
-                    if (typeof window !== 'undefined' && (window as any).gtag) {
-                      (window as any).gtag('event', 'click_whatsapp_final', {
-                        'event_category': 'conversion',
-                        'event_label': 'final_cta_secondary',
-                        'value': 1
-                      });
-                    }
+                    trackEvent("click_whatsapp_final", {
+                      event_category: "conversion",
+                      event_label: "final_cta_secondary",
+                      value: 1,
+                    });
                   }}
                   className="w-full justify-center"
                 >

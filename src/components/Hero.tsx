@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Clock, Shield } from "lucide-react";
 import heroImage from "@/assets/hero-ac-installation.jpg";
+import { trackEvent } from "@/lib/analytics";
 
 export const Hero = () => {
   return (
@@ -38,13 +39,11 @@ export const Hero = () => {
                 size="xl"
                 onClick={() => {
                   window.open("https://wa.me/5543984910234", "_blank");
-                  if (typeof window !== 'undefined' && (window as any).gtag) {
-                    (window as any).gtag('event', 'click_whatsapp_hero', {
-                      'event_category': 'conversion',
-                      'event_label': 'hero_primary_cta',
-                      'value': 1
-                    });
-                  }
+                  trackEvent("click_whatsapp_hero", {
+                    event_category: "conversion",
+                    event_label: "hero_primary_cta",
+                    value: 1,
+                  });
                 }}
                 className="w-full sm:w-auto"
               >
@@ -84,13 +83,11 @@ export const Hero = () => {
                   rel="noopener noreferrer"
                   className="text-primary-500 hover:text-primary-600 transition-colors font-semibold"
                   onClick={() => {
-                    if (typeof window !== 'undefined' && (window as any).gtag) {
-                      (window as any).gtag('event', 'view_reviews', {
-                        'event_category': 'social_proof',
-                        'event_label': 'google_reviews_link',
-                        'value': 1
-                      });
-                    }
+                    trackEvent("view_reviews", {
+                      event_category: "social_proof",
+                      event_label: "google_reviews_link",
+                      value: 1,
+                    });
                   }}
                 >
                   4,9★ - Ver 32 avaliações no Google

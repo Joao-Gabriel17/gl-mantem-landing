@@ -1,5 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Star } from "lucide-react";
+import { trackEvent } from "@/lib/analytics";
 import avatar1 from "@/assets/avatar-1.jpg";
 import avatar2 from "@/assets/avatar-2.jpg";
 import avatar3 from "@/assets/avatar-3.jpg";
@@ -101,13 +102,11 @@ export const Testimonials = () => {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-xl text-primary-500 hover:text-primary-600 transition-colors font-semibold"
             onClick={() => {
-              if (typeof window !== 'undefined' && (window as any).gtag) {
-                (window as any).gtag('event', 'view_reviews', {
-                  'event_category': 'social_proof',
-                  'event_label': 'testimonials_google_link',
-                  'value': 1
-                });
-              }
+              trackEvent("view_reviews", {
+                event_category: "social_proof",
+                event_label: "testimonials_google_link",
+                value: 1,
+              });
             }}
           >
             <Star className="w-6 h-6 fill-primary-500 text-primary-500" />

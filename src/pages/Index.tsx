@@ -9,6 +9,7 @@ import { FAQ } from "@/components/FAQ";
 import { FinalCTA } from "@/components/FinalCTA";
 import { Footer } from "@/components/Footer";
 import { useEffect } from "react";
+import { trackEvent } from "@/lib/analytics";
 
 const Index = () => {
   useEffect(() => {
@@ -47,13 +48,11 @@ const Index = () => {
 
       if (scrollPercent >= 75 && !scrollDepth75Tracked) {
         scrollDepth75Tracked = true;
-        if (typeof window !== 'undefined' && (window as any).gtag) {
-          (window as any).gtag('event', 'scroll_depth_75', {
-            'event_category': 'engagement',
-            'event_label': 'page_scroll',
-            'value': 75
-          });
-        }
+        trackEvent("scroll_depth_75", {
+          event_category: "engagement",
+          event_label: "page_scroll",
+          value: 75,
+        });
       }
     };
 
