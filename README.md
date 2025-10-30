@@ -71,3 +71,30 @@ Yes, you can!
 To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
 
 Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+
+## Builder preview & network troubleshooting checklist
+
+Follow this checklist to make sure Builder can load your models without network interference:
+
+1. Temporarily disable any VPN, corporate proxy, or traffic-filtering browser extensions.
+2. At the operating system, antivirus, and DNS/firewall layers, allow outbound access to the following wildcard domains:
+   - `*.builder.io`
+   - `*.builder.my`
+   - `*.builder.codes`
+3. Re-enable security tooling once the allow-lists are in place.
+
+### Configure the Builder model preview
+
+- Set the **Preview URL** in the Builder model documentation to your site domain:
+  - Development: `http://localhost:5173`
+  - Production (deployed): use the full `https://` URL of your live site.
+- Update the preview instructions to read: `Open in new tab (use site domain)` so editors always launch the Builder preview using your own origin.
+
+### Browser cache reset
+
+- In the browser devtools, open **Application → Clear storage** and click **Clear site data** for your domain.
+- Retry loading the Builder preview in an **incognito/private window** to rule out cached credentials or extensions.
+
+### Current status
+
+- The application loads without runtime errors on our side; observed blocking happens before Builder loads, indicating a network or proxy filtering issue.
