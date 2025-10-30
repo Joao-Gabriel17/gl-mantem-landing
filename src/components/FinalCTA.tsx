@@ -3,6 +3,7 @@ import { Card } from "@/components/ui/card";
 import { CheckCircle, Clock, Phone } from "lucide-react";
 import whatsappMockup from "@/assets/whatsapp-mockup.jpg";
 import { trackEvent } from "@/lib/analytics";
+import { WhatsAppLink } from "@/components/WhatsAppLink";
 
 export const FinalCTA = () => {
   return (
@@ -29,33 +30,40 @@ export const FinalCTA = () => {
                 <Button
                   variant="hero"
                   size="xl"
-                  onClick={() => {
-                    window.open("https://wa.me/5543984910234", "_blank");
-                    trackEvent("click_whatsapp_final", {
-                      event_category: "conversion",
-                      event_label: "final_cta",
-                      value: 1,
-                    });
-                  }}
                   className="w-full justify-center"
+                  asChild
                 >
-                  <Phone className="w-5 h-5 mr-2" />
-                  Chamar no WhatsApp (43) 98491-0234
+                  <WhatsAppLink
+                    onClick={() => {
+                      trackEvent("click_whatsapp_final", {
+                        event_category: "conversion",
+                        event_label: "final_cta",
+                        value: 1,
+                      });
+                    }}
+                  >
+                    <Phone className="w-5 h-5 mr-2" />
+                    Chamar no WhatsApp (43) 98491-0234
+                  </WhatsAppLink>
                 </Button>
                 <Button
                   variant="hero-outline"
                   size="xl"
-                  onClick={() => {
-                    window.open("https://wa.me/5543984910234", "_blank");
-                    trackEvent("click_whatsapp_final", {
-                      event_category: "conversion",
-                      event_label: "final_cta_secondary",
-                      value: 1,
-                    });
-                  }}
                   className="w-full justify-center"
+                  asChild
                 >
-                  Agendar visita técnica gratuita
+                  <WhatsAppLink
+                    message="Olá! Quero agendar uma visita técnica gratuita."
+                    onClick={() => {
+                      trackEvent("click_whatsapp_final", {
+                        event_category: "conversion",
+                        event_label: "final_cta_secondary",
+                        value: 1,
+                      });
+                    }}
+                  >
+                    Agendar visita técnica gratuita
+                  </WhatsAppLink>
                 </Button>
               </div>
 
