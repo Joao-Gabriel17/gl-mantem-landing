@@ -61,6 +61,12 @@ export const Footer = () => {
                 Nossos Serviços
               </a>
               <a
+                href="#how-it-works"
+                className="block text-textc-300 hover:text-primary-500 transition-colors py-1"
+              >
+                Como Funciona
+              </a>
+              <a
                 href="#testimonials"
                 className="block text-textc-300 hover:text-primary-500 transition-colors py-1"
               >

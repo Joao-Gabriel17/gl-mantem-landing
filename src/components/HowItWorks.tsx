@@ -30,7 +30,7 @@ export const HowItWorks = () => {
   ];
 
   return (
-    <section className="py-24 md:py-32 bg-surface-700/30">
+    <section id="how-it-works" className="py-24 md:py-32 bg-surface-700/30">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 md:mb-20">
