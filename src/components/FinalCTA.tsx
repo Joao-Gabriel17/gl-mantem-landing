@@ -90,10 +90,10 @@ export const FinalCTA = () => {
               <div className="relative max-w-sm w-full">
                 <img
                   src={whatsappMockup}
-                  alt="WhatsApp Business G&L Manutenções"
+                  alt="Atendimento WhatsApp G&L Manutenções - Resposta em até 30 minutos"
+                  loading="lazy"
                   className="w-full h-auto rounded-2xl shadow-elevated"
                 />
-                <div className="absolute -z-10 inset-0 bg-primary/20 rounded-2xl blur-2xl scale-110 animate-glow" />
               </div>
             </div>
           </div>

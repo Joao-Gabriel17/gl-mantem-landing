@@ -104,14 +104,12 @@ export const Hero = () => {
             <div className="relative rounded-2xl overflow-hidden shadow-elevated">
               <img
                 src={heroImage}
-                alt="Técnico profissional instalando ar-condicionado com precisão"
+                alt="Instalação profissional de ar-condicionado residencial em Londrina - G&L Manutenções"
+                loading="eager"
                 className="w-full h-auto object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background/20 to-transparent" />
             </div>
-            
-            {/* Floating decoration */}
-            <div className="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-primary/10 rounded-full blur-3xl animate-float" />
           </div>
         </div>
       </div>

@@ -59,7 +59,8 @@ export const Testimonials = () => {
       <div className="flex items-center gap-4 pt-6 border-t border-line-700">
         <img
           src={testimonial.avatar}
-          alt={testimonial.name}
+          alt={`${testimonial.name} - Cliente satisfeito G&L Manutenções`}
+          loading="lazy"
           className="w-14 h-14 rounded-full object-cover ring-2 ring-primary-500/20"
         />
         <div>
