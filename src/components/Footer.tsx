@@ -1,5 +1,6 @@
 import { Instagram, Phone } from "lucide-react";
 import { trackEvent } from "@/lib/analytics";
+import { WhatsAppLink } from "@/components/WhatsAppLink";
 
 export const Footer = () => {
   return (
@@ -25,10 +26,7 @@ export const Footer = () => {
             <div className="space-y-2 text-sm text-textc-300">
               <div className="flex items-center gap-2">
                 <Phone className="w-4 h-4 text-primary-500" />
-                <a
-                  href="https://wa.me/5543984910234"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <WhatsAppLink
                   className="hover:text-primary-500 focus:text-primary-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 focus-visible:ring-offset-bg-800 rounded px-1 py-1 -mx-1 inline-block transition-colors"
                   onClick={() => {
                     trackEvent("click_phone_footer", {
@@ -39,7 +37,7 @@ export const Footer = () => {
                   }}
                 >
                   (43) 98491-0234
-                </a>
+                </WhatsAppLink>
               </div>
               <p className="text-textc-300 mt-3 font-semibold">Cidades atendidas:</p>
               <p className="text-textc-300 leading-relaxed">

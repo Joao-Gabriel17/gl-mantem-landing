@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import { WhatsAppLink } from "@/components/WhatsAppLink";
 
 export const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -39,12 +40,8 @@ export const Navigation = () => {
 
           {/* CTA Button */}
           <div className="hidden md:flex items-center">
-            <Button
-              variant="hero"
-              size="lg"
-              onClick={() => window.open("https://wa.me/5543984910234", "_blank")}
-            >
-              WhatsApp
+            <Button variant="hero" size="lg" asChild>
+              <WhatsAppLink>WhatsApp</WhatsAppLink>
             </Button>
           </div>
 
@@ -73,16 +70,14 @@ export const Navigation = () => {
                 {link.label}
               </a>
             ))}
-            <Button
-              variant="hero"
-              size="lg"
-              className="w-full"
-              onClick={() => {
-                window.open("https://wa.me/5543984910234", "_blank");
-                setIsMenuOpen(false);
-              }}
-            >
-              WhatsApp
+            <Button variant="hero" size="lg" className="w-full" asChild>
+              <WhatsAppLink
+                onClick={() => {
+                  setIsMenuOpen(false);
+                }}
+              >
+                WhatsApp
+              </WhatsAppLink>
             </Button>
           </div>
         </div>

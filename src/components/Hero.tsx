@@ -3,6 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { Clock, Shield } from "lucide-react";
 import heroImage from "@/assets/hero-ac-installation.jpg";
 import { trackEvent } from "@/lib/analytics";
+import { WhatsAppLink } from "@/components/WhatsAppLink";
 
 export const Hero = () => {
   return (
@@ -34,20 +35,18 @@ export const Hero = () => {
 
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-5 pt-4">
-              <Button
-                variant="hero"
-                size="xl"
-                onClick={() => {
-                  window.open("https://wa.me/5543984910234", "_blank");
-                  trackEvent("click_whatsapp_hero", {
-                    event_category: "conversion",
-                    event_label: "hero_primary_cta",
-                    value: 1,
-                  });
-                }}
-                className="w-full sm:w-auto"
-              >
-                Pedir orçamento no WhatsApp
+              <Button variant="hero" size="xl" className="w-full sm:w-auto" asChild>
+                <WhatsAppLink
+                  onClick={() => {
+                    trackEvent("click_whatsapp_hero", {
+                      event_category: "conversion",
+                      event_label: "hero_primary_cta",
+                      value: 1,
+                    });
+                  }}
+                >
+                  Pedir orçamento no WhatsApp
+                </WhatsAppLink>
               </Button>
               <Button
                 variant="hero-outline"
