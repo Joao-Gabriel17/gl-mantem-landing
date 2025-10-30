@@ -12,21 +12,35 @@ import { useEffect } from "react";
 
 const Index = () => {
   useEffect(() => {
-    // Smooth scroll behavior for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-      anchor.addEventListener("click", function (e) {
+    // Smooth scroll behavior for all anchor links
+    const handleAnchorClick = (e: Event) => {
+      const target = e.target as HTMLElement;
+      const anchor = target.closest('a[href^="#"]') as HTMLAnchorElement;
+      
+      if (anchor) {
         e.preventDefault();
-        const target = document.querySelector(
-          (this as HTMLAnchorElement).getAttribute("href")!
-        );
-        if (target) {
-          target.scrollIntoView({
-            behavior: "smooth",
-            block: "start",
-          });
+        const href = anchor.getAttribute("href");
+        if (href) {
+          const element = document.querySelector(href);
+          if (element) {
+            const offset = 80; // Height of fixed navigation
+            const elementPosition = element.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+            window.scrollTo({
+              top: offsetPosition,
+              behavior: "smooth",
+            });
+          }
         }
-      });
-    });
+      }
+    };
+
+    document.addEventListener("click", handleAnchorClick);
+    
+    return () => {
+      document.removeEventListener("click", handleAnchorClick);
+    };
   }, []);
 
   return (
