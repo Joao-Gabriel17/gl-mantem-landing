@@ -30,7 +30,7 @@ export const Navigation = () => {
               <a
                 key={link.id}
                 href={link.href}
-                className="text-textc-300 hover:text-textc-100 transition-colors duration-200 text-sm font-medium"
+                className="text-textc-300 hover:text-textc-100 focus:text-textc-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 rounded px-2 py-1 -mx-2 transition-colors duration-200 text-sm font-medium"
               >
                 {link.label}
               </a>
@@ -68,7 +68,7 @@ export const Navigation = () => {
                 key={link.id}
                 href={link.href}
                 onClick={() => setIsMenuOpen(false)}
-                className="block py-2 text-textc-300 hover:text-textc-100 transition-colors duration-200"
+                className="block py-3 px-2 -mx-2 text-textc-300 hover:text-textc-100 focus:text-textc-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 rounded transition-colors duration-200"
               >
                 {link.label}
               </a>

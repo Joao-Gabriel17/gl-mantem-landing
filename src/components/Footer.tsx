@@ -28,7 +28,7 @@ export const Footer = () => {
                   href="https://wa.me/5543984910234"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-primary-500 transition-colors"
+                  className="hover:text-primary-500 focus:text-primary-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 focus-visible:ring-offset-bg-800 rounded px-1 py-1 -mx-1 inline-block transition-colors"
                   onClick={() => {
                     if (typeof window !== 'undefined' && (window as any).gtag) {
                       (window as any).gtag('event', 'click_phone_footer', {
@@ -56,25 +56,25 @@ export const Footer = () => {
             <div className="space-y-2 text-sm">
               <a
                 href="#features"
-                className="block text-textc-300 hover:text-primary-500 transition-colors py-1"
+                className="block text-textc-300 hover:text-primary-500 focus:text-primary-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 focus-visible:ring-offset-bg-800 rounded transition-colors py-3 px-2 -mx-2"
               >
                 Nossos Serviços
               </a>
               <a
                 href="#how-it-works"
-                className="block text-textc-300 hover:text-primary-500 transition-colors py-1"
+                className="block text-textc-300 hover:text-primary-500 focus:text-primary-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 focus-visible:ring-offset-bg-800 rounded transition-colors py-3 px-2 -mx-2"
               >
                 Como Funciona
               </a>
               <a
                 href="#testimonials"
-                className="block text-textc-300 hover:text-primary-500 transition-colors py-1"
+                className="block text-textc-300 hover:text-primary-500 focus:text-primary-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 focus-visible:ring-offset-bg-800 rounded transition-colors py-3 px-2 -mx-2"
               >
                 Depoimentos
               </a>
               <a
                 href="#faq"
-                className="block text-textc-300 hover:text-primary-500 transition-colors py-1"
+                className="block text-textc-300 hover:text-primary-500 focus:text-primary-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 focus-visible:ring-offset-bg-800 rounded transition-colors py-3 px-2 -mx-2"
               >
                 Perguntas Frequentes
               </a>
@@ -89,7 +89,7 @@ export const Footer = () => {
                 href="https://www.instagram.com/glmanutencoesereparo"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-primary-500/10 flex items-center justify-center hover:bg-primary-500/20 transition-colors"
+                className="w-12 h-12 rounded-full bg-primary-500/10 flex items-center justify-center hover:bg-primary-500/20 focus:bg-primary-500/20 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 focus-visible:ring-offset-bg-800 transition-colors"
                 aria-label="Instagram"
               >
                 <Instagram className="w-5 h-5 text-primary-500" />

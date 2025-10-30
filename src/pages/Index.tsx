@@ -37,9 +37,31 @@ const Index = () => {
     };
 
     document.addEventListener("click", handleAnchorClick);
+
+    // Scroll depth tracking (75%)
+    let scrollDepth75Tracked = false;
+    const handleScrollDepth = () => {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrollPercent = (scrollTop / docHeight) * 100;
+
+      if (scrollPercent >= 75 && !scrollDepth75Tracked) {
+        scrollDepth75Tracked = true;
+        if (typeof window !== 'undefined' && (window as any).gtag) {
+          (window as any).gtag('event', 'scroll_depth_75', {
+            'event_category': 'engagement',
+            'event_label': 'page_scroll',
+            'value': 75
+          });
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScrollDepth);
     
     return () => {
       document.removeEventListener("click", handleAnchorClick);
+      window.removeEventListener('scroll', handleScrollDepth);
     };
   }, []);
 
