@@ -1,4 +1,5 @@
 import { Instagram, Phone } from "lucide-react";
+import { trackEvent } from "@/lib/analytics";
 
 export const Footer = () => {
   return (
@@ -30,13 +31,11 @@ export const Footer = () => {
                   rel="noopener noreferrer"
                   className="hover:text-primary-500 focus:text-primary-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 focus-visible:ring-offset-bg-800 rounded px-1 py-1 -mx-1 inline-block transition-colors"
                   onClick={() => {
-                    if (typeof window !== 'undefined' && (window as any).gtag) {
-                      (window as any).gtag('event', 'click_phone_footer', {
-                        'event_category': 'engagement',
-                        'event_label': 'footer_contact',
-                        'value': 1
-                      });
-                    }
+                    trackEvent("click_phone_footer", {
+                      event_category: "engagement",
+                      event_label: "footer_contact",
+                      value: 1,
+                    });
                   }}
                 >
                   (43) 98491-0234
