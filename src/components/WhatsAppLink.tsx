@@ -6,7 +6,12 @@ type Props = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
   message?: string;
 };
 
-export function WhatsAppLink({ phone = WHATSAPP_PRIMARY, message = DEFAULT_WA_MSG, children, ...props }: Props) {
+export function WhatsAppLink({
+  phone = WHATSAPP_PRIMARY,
+  message = DEFAULT_WA_MSG,
+  children,
+  ...props
+}: Props) {
   const href = buildWhatsAppLink(phone, message);
   return (
     <a
