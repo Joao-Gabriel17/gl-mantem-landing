@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { CheckCircle, Clock, Phone } from "lucide-react";
-import whatsappMockup from "@/assets/whatsapp-mockup.jpg";
+import whatsappHero from "@/assets/whatsapp-hero.png";
 import { trackEvent } from "@/lib/analytics";
 import { WhatsAppLink } from "@/components/WhatsAppLink";
 
