@@ -24,9 +24,8 @@ export const Hero = () => {
             {/* Headline */}
             <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold leading-[1.1] text-textc-100">
               Ar-condicionado instalado com{" "}
-              <span className="brush-underline">pontualidade e</span>{" "}
-              <span className="marker-bg">acabamento</span>{" "}
-              <span className="marker-bg">impecável</span>
+              <span className="text-primary-500">pontualidade</span> e{" "}
+              <span className="text-accent-amber-400">acabamento impecável</span>
             </h1>
 
             {/* Subheadline */}
