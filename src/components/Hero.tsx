@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Clock, Shield } from "lucide-react";
-import heroImage from "@/assets/hero-ac-installation.jpg";
+import heroImage from "@/assets/hero-ac-install.jpg";
 import { trackEvent } from "@/lib/analytics";
 import { WhatsAppLink } from "@/components/WhatsAppLink";
 
@@ -100,9 +100,13 @@ export const Hero = () => {
             <div className="relative rounded-2xl overflow-hidden shadow-elevated">
               <img
                 src={heroImage}
-                alt="Instalação profissional de ar-condicionado residencial em Londrina - G&L Manutenções"
+                alt="Técnico instalando ar-condicionado split — G&L Manutenções em Londrina"
                 loading="eager"
+                fetchPriority="high"
+                decoding="async"
                 className="w-full h-auto object-cover"
+                width={1280}  // opcional: ajuda a reduzir CLS
+                height={853}  // ajuste à proporção da sua imagem
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background/20 to-transparent" />
             </div>
