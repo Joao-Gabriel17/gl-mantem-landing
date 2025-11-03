@@ -2,6 +2,9 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Clock, Shield } from "lucide-react";
 import heroImage from "@/assets/hero-ac-install.jpg";
+import sublinhadoImage from "@/assets/sublinhado.png";
+import marcaTextoAcabamento from "@/assets/marca-texto-acabamento.png";
+import marcaTextoImpecavel from "@/assets/marca-texto-impecavel.png";
 import { trackEvent } from "@/lib/analytics";
 import { WhatsAppLink } from "@/components/WhatsAppLink";
 
@@ -22,10 +25,40 @@ export const Hero = () => {
             </Badge>
 
             {/* Headline */}
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold leading-[1.1] text-textc-100">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold leading-[1.4] text-textc-100">
               Ar-condicionado instalado com{" "}
-              <span className="text-primary-500">pontualidade</span> e{" "}
-              <span className="text-accent-amber-400">acabamento impecável</span>
+              <span className="relative inline-block">
+                <span className="text-primary-500 relative z-10">pontualidade</span>
+                <img 
+                  src={sublinhadoImage} 
+                  alt="" 
+                  className="absolute bottom-0 left-0 w-full h-auto opacity-90 pointer-events-none"
+                  aria-hidden="true"
+                />
+              </span>{" "}
+              e{" "}
+              <span className="relative inline-block">
+                <span className="relative z-10">
+                  <span className="relative inline-block">
+                    <span className="text-textc-100 relative z-10">acabamento</span>
+                    <img 
+                      src={marcaTextoAcabamento} 
+                      alt="" 
+                      className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[110%] h-auto opacity-90 pointer-events-none"
+                      aria-hidden="true"
+                    />
+                  </span>{" "}
+                  <span className="relative inline-block">
+                    <span className="text-textc-100 relative z-10">impecável</span>
+                    <img 
+                      src={marcaTextoImpecavel} 
+                      alt="" 
+                      className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[110%] h-auto opacity-90 pointer-events-none"
+                      aria-hidden="true"
+                    />
+                  </span>
+                </span>
+              </span>
             </h1>
 
             {/* Subheadline */}
