@@ -1,10 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Clock, Shield } from "lucide-react";
-import heroImage from "@/assets/hero-ac-install.jpg";
-import sublinhadoImage from "@/assets/sublinhado.png";
-import marcaTextoAcabamento from "@/assets/marca-texto-acabamento.png";
-import marcaTextoImpecavel from "@/assets/marca-texto-impecavel.png";
+import heroImage from "@/assets/hero-ac-installation.jpg";
 import { trackEvent } from "@/lib/analytics";
 import { WhatsAppLink } from "@/components/WhatsAppLink";
 
@@ -28,37 +25,11 @@ export const Hero = () => {
             <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold leading-[1.4] text-textc-100">
               Ar-condicionado instalado com{" "}
               <span className="relative inline-block">
-                <span className="text-primary-500 relative z-10">pontualidade</span>
-                <img 
-                  src={sublinhadoImage} 
-                  alt="" 
-                  className="absolute bottom-0 left-0 w-full h-auto opacity-90 pointer-events-none"
-                  aria-hidden="true"
-                />
+                pontualidade
+                <span className="absolute bottom-1 left-0 right-0 h-1 bg-primary-500" />
               </span>{" "}
               e{" "}
-              <span className="relative inline-block">
-                <span className="relative z-10">
-                  <span className="relative inline-block">
-                    <span className="text-textc-100 relative z-10">acabamento</span>
-                    <img 
-                      src={marcaTextoAcabamento} 
-                      alt="" 
-                      className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[110%] h-auto opacity-90 pointer-events-none"
-                      aria-hidden="true"
-                    />
-                  </span>{" "}
-                  <span className="relative inline-block">
-                    <span className="text-textc-100 relative z-10">impecável</span>
-                    <img 
-                      src={marcaTextoImpecavel} 
-                      alt="" 
-                      className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[110%] h-auto opacity-90 pointer-events-none"
-                      aria-hidden="true"
-                    />
-                  </span>
-                </span>
-              </span>
+              <span className="bg-primary-500 px-2 py-1 inline-block">acabamento impecável</span>
             </h1>
 
             {/* Subheadline */}
@@ -133,13 +104,9 @@ export const Hero = () => {
             <div className="relative rounded-2xl overflow-hidden shadow-elevated">
               <img
                 src={heroImage}
-                alt="Técnico instalando ar-condicionado split — G&L Manutenções em Londrina"
+                alt="Instalação profissional de ar-condicionado residencial em Londrina - G&L Manutenções"
                 loading="eager"
-                fetchPriority="high"
-                decoding="async"
                 className="w-full h-auto object-cover"
-                width={1280}  // opcional: ajuda a reduzir CLS
-                height={853}  // ajuste à proporção da sua imagem
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background/20 to-transparent" />
             </div>
