@@ -94,7 +94,7 @@ export const FinalCTA = () => {
             <div className="flex items-center justify-center lg:justify-end animate-fade-in" style={{ animationDelay: "300ms" }}>
               <div className="relative max-w-sm w-full">
                 <img
-                  src={whatsappMockup}
+                  src={whatsappHero}
                   alt="Atendimento WhatsApp G&L Manutenções - Resposta em até 30 minutos"
                   loading="lazy"
                   className="w-full h-auto rounded-2xl shadow-elevated"
