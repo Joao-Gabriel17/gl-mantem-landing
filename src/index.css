@@ -154,44 +154,28 @@ All colors MUST be HSL.
     @apply tracking-tight;
   }
 
-/* texto com camada isolada */
-.hl {
+.hl-bg {
   position: relative;
   display: inline-block;
-  white-space: nowrap;
-  isolation: isolate;    /* *** cria um stacking context local *** */
-  z-index: 0;            /* referencial para os pseudos */
-}
-
-/* sublinhado tipo pincel */
-.hl-brush::after {
-  content: "";
-  position: absolute;
-  left: -.06em; right: -.06em;
-  bottom: -.26em;
-  height: .36em;
-  background: url("/textures/brush-underline.png") repeat-x center;
-  background-size: auto 100%;
-  pointer-events: none;
-  z-index: -1;           /* atrás do texto, mas ainda dentro do .hl */
-}
-
-/* bloco marcatexto */
-.hl-marker::before {
-  content: "";
-  position: absolute;
-  inset: .22em -.16em .12em -.16em;
+  padding: .08em .18em;
   background-repeat: no-repeat;
-  background-position: left center;
-  background-size: 100% 100%;
-  pointer-events: none;
-  z-index: -1;           /* idem */
-  box-shadow: inset 0 -2px 0 rgba(0,0,0,.12);
+  background-position: left 60%;
+  background-size: 100% 70%;
+  box-decoration-break: clone; /* segura em quebras de linha */
 }
 
-/* variantes das artes */
-.hl-marker--v1::before { background-image: url("/textures/marker-1.png"); }
-.hl-marker--v2::before { background-image: url("/textures/marker-2.png"); }
+/* variantes */
+.hl-bg--v1 { background-image: url("/textures/marker-1.png"); }
+.hl-bg--v2 { background-image: url("/textures/marker-2.png"); }
+
+/* sublinhado pincel como background em vez de ::after */
+.hl-underline {
+  position: relative;
+  display: inline-block;
+  background: url("/textures/brush-underline.png") repeat-x center bottom;
+  background-size: auto .36em;
+  padding-bottom: .2em;
+}
 
 @media (max-width:640px) {
   .hl-marker::before { inset: .26em -.12em .14em -.12em; }
