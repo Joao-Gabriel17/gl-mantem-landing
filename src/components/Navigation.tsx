@@ -18,10 +18,10 @@ export const Navigation = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-bg-900/80 backdrop-blur-lg border-b border-line-700">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 md:h-20">
+        <div className="flex items-center justify-between h-20 md:h-24">
           {/* Logo */}
           <a href="#" className="flex items-center transition-transform duration-300 hover:scale-105">
-            <img src={logoImage} alt="G&L Manutenções" className="h-10 md:h-12 w-auto" />
+            <img src={logoImage} alt="G&L Manutenções" className="h-12 md:h-16 lg:h-20 w-auto" />
           </a>
 
           {/* Desktop Navigation */}
