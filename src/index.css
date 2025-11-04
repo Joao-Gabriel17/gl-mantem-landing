@@ -156,26 +156,26 @@ All colors MUST be HSL.
 
   .hl { position: relative; display: inline-block; white-space: nowrap; }
 
-  .hl-brush::after{
+.hl-brush::after{
   content:"";
   position:absolute;
   left:-.06em; right:-.06em;
-  bottom:-.26em;          /* distância do traço ao texto */
-  height:.36em;           /* espessura do traço */
-  background: var(--brush-img) repeat-x center;
-  background-size: auto 100%; /* a altura manda; repete na largura */
+  bottom:-.26em;
+  height:.36em;
+  background: var(--brush-img) repeat-x center;  /* <— AQUI */
+  background-size: auto 100%;
   pointer-events:none;
   z-index:-1;
-  }
+}
   /* MARCADOR: bloco atrás da palavra */
 .hl-marker::before{
   content:"";
   position:absolute;
-  inset:.22em -.16em .12em -.16em; /* top right bottom left */
-  background-image: var(--marker-img);
+  inset:.22em -.16em .12em -.16em;
+  background-image: var(--marker-img);          /* <— E AQUI */
   background-repeat:no-repeat;
   background-position:left center;
-  background-size:100% 100%;       /* estica para caber na palavra */
+  background-size:100% 100%;
   pointer-events:none;
   z-index:-1;
   box-shadow: inset 0 -2px 0 rgba(0,0,0,.12);
