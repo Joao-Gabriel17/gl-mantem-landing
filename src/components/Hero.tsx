@@ -22,10 +22,11 @@ export const Hero = () => {
             </Badge>
 
             {/* Headline */}
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold leading-[1.1] text-textc-100">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold leading-[1.1] text-textc-100">
               Ar-condicionado instalado com{" "}
-              <span className="text-primary-500">pontualidade</span> e{" "}
-              <span className="text-accent-amber-400">acabamento impecável</span>
+              <span className="hl hl-brush">pontualidade e</span>{" "}
+              <span className="hl hl-marker hl-marker--v1">acabamento</span>{" "}
+              <span className="hl hl-marker hl-marker--v2">impecável</span>
             </h1>
 
             {/* Subheadline */}
