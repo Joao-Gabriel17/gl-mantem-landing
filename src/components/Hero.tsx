@@ -34,13 +34,13 @@ export const Hero = () => {
                 pontualidade e
               </span>{" "}
               <span
-                className="hl hl-marker hl-marker--v1"
+                className="hl hl-marker"
                 style={{ ["--marker-img" as any]: `url(${marker1Url})` }}
               >
                 acabamento
               </span>{" "}
               <span
-                className="hl hl-marker hl-marker--v2"
+                className="hl hl-marker"
                 style={{ ["--marker-img" as any]: `url(${marker2Url})` }}
               >
                 impecável
