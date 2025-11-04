@@ -27,15 +27,24 @@ export const Hero = () => {
             {/* Headline */}
             <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold leading-[1.1] text-textc-100">
               Ar-condicionado instalado com{" "}
-              <span className="hl hl-brush" style={{ ["--brush-img" as any]: `url(${brushUrl})` }}>
-              pontualidade e
-            </span>
-            <span className="hl hl-marker" style={{ ["--marker-img" as any]: `url(${marker1Url})` }}>
-              acabamento
-            </span>
-            <span className="hl hl-marker" style={{ ["--marker-img" as any]: `url(${marker2Url})` }}>
-              impecável
-            </span>
+              <span
+                className="hl hl-brush"
+                style={{ ["--brush-img" as any]: `url(${brushUrl})` }}
+              >
+                <span className="hl-inner">pontualidade e</span>
+              </span>{" "}
+              <span
+                className="hl hl-marker"
+                style={{ ["--marker-img" as any]: `url(${marker1Url})` }}
+              >
+                <span className="hl-inner">acabamento</span>
+              </span>{" "}
+              <span
+                className="hl hl-marker"
+                style={{ ["--marker-img" as any]: `url(${marker2Url})` }}
+              >
+                <span className="hl-inner">impecável</span>
+              </span>
             </h1>
 
             {/* Subheadline */}
