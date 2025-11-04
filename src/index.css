@@ -154,47 +154,46 @@ All colors MUST be HSL.
     @apply tracking-tight;
   }
 
-  /* BASE */
-.hl{
+/* texto com camada isolada */
+.hl {
   position: relative;
   display: inline-block;
   white-space: nowrap;
-}
-/* Texto sempre acima do fundo/pincel */
-.hl-inner{
-  position: relative;
-  z-index: 1;
+  isolation: isolate;    /* *** cria um stacking context local *** */
+  z-index: 0;            /* referencial para os pseudos */
 }
 
-/* SUBLINHADO (fica abaixo do texto, mas sem z-index negativo) */
-.hl-brush::after{
-  content:"";
-  position:absolute;
-  left:-.06em; right:-.06em;
-  bottom:-.26em;
-  height:.36em;
-  background: var(--brush-img) repeat-x center;
+/* sublinhado tipo pincel */
+.hl-brush::after {
+  content: "";
+  position: absolute;
+  left: -.06em; right: -.06em;
+  bottom: -.26em;
+  height: .36em;
+  background: url("/textures/brush-underline.png") repeat-x center;
   background-size: auto 100%;
-  pointer-events:none;
-  z-index: 0;        /* <- trocado de -1 para 0 */
+  pointer-events: none;
+  z-index: -1;           /* atrás do texto, mas ainda dentro do .hl */
 }
 
-/* MARCADOR (idem) */
-.hl-marker::before{
-  content:"";
-  position:absolute;
-  inset:.22em -.16em .12em -.16em;
-  background-image: var(--marker-img);
-  background-repeat:no-repeat;
-  background-position:left center;
-  background-size:100% 100%;
-  pointer-events:none;
-  z-index: 0;        /* <- trocado de -1 para 0 */
+/* bloco marcatexto */
+.hl-marker::before {
+  content: "";
+  position: absolute;
+  inset: .22em -.16em .12em -.16em;
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 100% 100%;
+  pointer-events: none;
+  z-index: -1;           /* idem */
   box-shadow: inset 0 -2px 0 rgba(0,0,0,.12);
 }
 
-/* Mobile */
-@media (max-width:640px){
-  .hl-marker::before{ inset:.26em -.12em .14em -.12em; }
+/* variantes das artes */
+.hl-marker--v1::before { background-image: url("/textures/marker-1.png"); }
+.hl-marker--v2::before { background-image: url("/textures/marker-2.png"); }
+
+@media (max-width:640px) {
+  .hl-marker::before { inset: .26em -.12em .14em -.12em; }
 }
 }
