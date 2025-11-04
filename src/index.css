@@ -154,30 +154,45 @@ All colors MUST be HSL.
     @apply tracking-tight;
   }
 
-.hl-bg {
+/* Contêiner base do destaque */
+.hl-block{
   position: relative;
   display: inline-block;
-  padding: .08em .18em;
-  background-repeat: no-repeat;
-  background-position: left 60%;
-  background-size: 100% 70%;
-  box-decoration-break: clone; /* segura em quebras de linha */
+  white-space: nowrap;
 }
 
-/* variantes */
-.hl-bg--v1 { background-image: url("/textures/marker-1.png"); }
-.hl-bg--v2 { background-image: url("/textures/marker-2.png"); }
+/* Imagem de fundo (marca-texto/sublinhado) */
+.hl-img{
+  position: absolute;
+  inset: .20em -.16em .10em -.16em; /* ajuste do “bloco” atrás da palavra */
+  width: 100%;
+  height: 100%;
+  object-fit: fill;          /* preenche a palavra toda */
+  pointer-events: none;
+  z-index: 0;
+  opacity: 1;
+}
 
-/* sublinhado pincel como background em vez de ::after */
-.hl-underline {
+/* Texto sempre acima */
+.hl-text{
   position: relative;
-  display: inline-block;
-  background: url("/textures/brush-underline.png") repeat-x center bottom;
-  background-size: auto .36em;
-  padding-bottom: .2em;
+  z-index: 1;
 }
 
-@media (max-width:640px) {
-  .hl-marker::before { inset: .26em -.12em .14em -.12em; }
+/* Sublinhado como imagem “estreita” lá embaixo */
+.hl-underline{
+  position: absolute;
+  left: -0.06em;
+  right: -0.06em;
+  bottom: -0.26em;  /* distância do traço ao texto */
+  height: .36em;    /* espessura do traço */
+  width: auto;
+  pointer-events: none;
+  z-index: 0;
+  object-fit: contain;
+}
+
+@media (max-width:640px){
+  .hl-img{ inset:.26em -.12em .14em -.12em; }
 }
 }
