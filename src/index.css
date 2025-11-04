@@ -162,7 +162,7 @@ All colors MUST be HSL.
   left:-.06em; right:-.06em;
   bottom:-.26em;          /* distância do traço ao texto */
   height:.36em;           /* espessura do traço */
-  background: url("/textures/brush-underline.png") repeat-x center;
+  background: url("textures/brush-underline.png") repeat-x center;
   background-size: auto 100%; /* a altura manda; repete na largura */
   pointer-events:none;
   z-index:-1;
@@ -181,8 +181,8 @@ All colors MUST be HSL.
 }
 
 /* VARIANTES (2 artes diferentes) */
-.hl-marker--v1::before{ background-image: url("/textures/marker-1.png"); }
-.hl-marker--v2::before{ background-image: url("/textures/marker-2.png"); }
+.hl-marker--v1::before{ background-image:url("textures/marker-1.png"); }
+.hl-marker--v2::before{ background-image:url("textures/marker-2.png"); }
 
 /* Mobile: afinamos um pouco a altura do bloco */
 @media (max-width:640px){
