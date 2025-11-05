@@ -1,6 +1,7 @@
 import { Instagram, Phone } from "lucide-react";
 import { trackEvent } from "@/lib/analytics";
 import { WhatsAppLink } from "@/components/WhatsAppLink";
+import logoImage from "@/assets/logo.png";
 
 export const Footer = () => {
   return (
@@ -9,12 +10,7 @@ export const Footer = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           {/* Company Info */}
           <div className="space-y-4">
-            <div className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-gradient-to-br from-primary-500 to-primary-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">G&L</span>
-              </div>
-              <span className="font-bold text-lg text-textc-100">G&L Manutenções</span>
-            </div>
+            <img src={logoImage} alt="G&L Manutenções" className="h-16 w-auto" />
             <p className="text-sm text-textc-300">
               Climatização de confiança em Londrina
             </p>
