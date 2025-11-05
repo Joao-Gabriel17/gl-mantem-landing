@@ -27,23 +27,11 @@ export const Hero = () => {
 
             {/* Headline */}
  <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold leading-[1.1] text-textc-100">
-      Ar-condicionado instalado com{" "}
-
-<span className="hl-block">
-  <span className="hl-text">pontualidade&nbsp;e</span>
-  <img src={brushUrl} alt="" aria-hidden className="hl-underline" />
-</span>{" "}
-
-<span className="hl-block">
-  <img src={marker1Url} alt="" aria-hidden className="hl-img" />
-  <span className="hl-text">acabamento</span>
-</span>{" "}
-
-<span className="hl-block">
-  <img src={marker2Url} alt="" aria-hidden className="hl-img" />
-  <span className="hl-text">impecável</span>
-</span>
-    </h1>
+  Ar-condicionado instalado com{" "}
+  <span className="hl hl-underline">pontualidade</span> e{" "}
+  <span className="hl hl-marker hl-marker--v1">acabamento</span>{" "}
+  <span className="hl hl-marker hl-marker--v2">impecável</span>
+</h1>
 
             {/* Subheadline */}
             <p className="text-xl sm:text-2xl text-textc-300 leading-relaxed max-w-2xl">
