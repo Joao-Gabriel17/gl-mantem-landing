@@ -4,13 +4,10 @@ import { Clock, Shield } from "lucide-react";
 import heroImage from "@/assets/hero-ac-install.jpg";
 import { trackEvent } from "@/lib/analytics";
 import { WhatsAppLink } from "@/components/WhatsAppLink";
+
 import brushUrl from "@/assets/textures/brush-underline.png";
 import marker1Url from "@/assets/textures/marker-1.png";
 import marker2Url from "@/assets/textures/marker-2.png";
-
-const brushUrl  = "/textures/brush-underline.png";
-const marker1Url = "/textures/marker-1.png";
-const marker2Url = "/textures/marker-2.png";
 
 export const Hero = () => {
   return (
@@ -29,51 +26,47 @@ export const Hero = () => {
             </Badge>
 
             {/* Headline */}
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold leading-[1.1] text-textc-100">
-  Ar-condicionado instalado com{" "}
-  {/* SUBLINHADO (pontualidade e) */}
-  <span className="hl-block">
-    <span className="hl-text">pontualidade&nbsp;e</span>
-    <img
-      src={brushUrl}
-      alt=""
-      aria-hidden
-      className="hl-underline"
-      style={{
-        left: "-0.8em",
-        right: "-0.8em",
-        bottom: "-1.05em",
-        height: "1.45em",
-      }}
-    />
-  </span>{" "}
-  {/* MARCADOR 1 (acabamento) */}
-  <span className="hl-block">
-    <img
-      src={marker1Url}
-      alt=""
-      aria-hidden
-      className="hl-img"
-      style={{
-        inset: "-0.36em -1.60em -0.26em -1.60em",
-      }}
-    />
-    <span className="hl-text">acabamento</span>
-  </span>{" "}
-  {/* MARCADOR 2 (impecável) */}
-  <span className="hl-block">
-    <img
-      src={marker2Url}
-      alt=""
-      aria-hidden
-      className="hl-img"
-      style={{
-        inset: "-0.40em -1.70em -0.32em -1.70em",
-      }}
-    />
-    <span className="hl-text">impecável</span>
-  </span>
-</h1>
+ <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold leading-[1.1] text-textc-100">
+      Ar-condicionado instalado com{" "}
+      {/* SUBLINHADO (pontualidade e) */}
+      <span className="hl-block">
+        <span className="hl-text">pontualidade&nbsp;e</span>
+        <img
+          src={brushUrl}   // ✅ usa a URL importada
+          alt=""
+          aria-hidden
+          className="hl-underline"
+          style={{
+            left: "-0.8em",
+            right: "-0.8em",
+            bottom: "-1.05em",
+            height: "1.45em",
+          }}
+        />
+      </span>{" "}
+      {/* MARCADOR 1 (acabamento) */}
+      <span className="hl-block">
+        <img
+          src={marker1Url}  // ✅
+          alt=""
+          aria-hidden
+          className="hl-img"
+          style={{ inset: "-0.36em -1.60em -0.26em -1.60em" }}
+        />
+        <span className="hl-text">acabamento</span>
+      </span>{" "}
+      {/* MARCADOR 2 (impecável) */}
+      <span className="hl-block">
+        <img
+          src={marker2Url}  // ✅
+          alt=""
+          aria-hidden
+          className="hl-img"
+          style={{ inset: "-0.40em -1.70em -0.32em -1.70em" }}
+        />
+        <span className="hl-text">impecável</span>
+      </span>
+    </h1>
 
             {/* Subheadline */}
             <p className="text-xl sm:text-2xl text-textc-300 leading-relaxed max-w-2xl">
