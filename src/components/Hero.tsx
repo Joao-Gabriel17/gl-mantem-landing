@@ -28,44 +28,24 @@ export const Hero = () => {
             {/* Headline */}
  <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold leading-[1.1] text-textc-100">
       Ar-condicionado instalado com{" "}
-      {/* SUBLINHADO (pontualidade e) */}
-      <span className="hl-block">
-        <span className="hl-text">pontualidade&nbsp;e</span>
-        <img
-          src={brushUrl}   // ✅ usa a URL importada
-          alt=""
-          aria-hidden
-          className="hl-underline"
-          style={{
-            left: "-0.8em",
-            right: "-0.8em",
-            bottom: "-1.05em",
-            height: "1.45em",
-          }}
-        />
-      </span>{" "}
-      {/* MARCADOR 1 (acabamento) */}
-      <span className="hl-block">
-        <img
-          src={marker1Url}  // ✅
-          alt=""
-          aria-hidden
-          className="hl-img"
-          style={{ inset: "-0.36em -1.60em -0.26em -1.60em" }}
-        />
-        <span className="hl-text">acabamento</span>
-      </span>{" "}
-      {/* MARCADOR 2 (impecável) */}
-      <span className="hl-block">
-        <img
-          src={marker2Url}  // ✅
-          alt=""
-          aria-hidden
-          className="hl-img"
-          style={{ inset: "-0.40em -1.70em -0.32em -1.70em" }}
-        />
-        <span className="hl-text">impecável</span>
-      </span>
+
+/* SUBLINHADO (pontualidade e) */
+<span className="hl-block">
+  <span className="hl-text">pontualidade&nbsp;e</span>
+  <img src={brushUrl} alt="" aria-hidden className="hl-underline" />
+</span>{" "}
+
+/* MARCADOR 1 (acabamento) */
+<span className="hl-block">
+  <img src={marker1Url} alt="" aria-hidden className="hl-img" />
+  <span className="hl-text">acabamento</span>
+</span>{" "}
+
+/* MARCADOR 2 (impecável) */
+<span className="hl-block">
+  <img src={marker2Url} alt="" aria-hidden className="hl-img" />
+  <span className="hl-text">impecável</span>
+</span>
     </h1>
 
             {/* Subheadline */}
