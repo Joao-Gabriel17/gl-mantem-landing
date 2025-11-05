@@ -29,22 +29,47 @@ export const Hero = () => {
               Ar-condicionado instalado com{" "}
             
               {/* sublinhado – já mais grosso/baixo */}
-              <span className="hl-block hl-thick">
+              <span
+                className="hl-block hl-thick"
+                style={{
+                  ['--ul-left' as any]: '-.15em',
+                  ['--ul-right' as any]: '-.15em',
+                  ['--ul-bottom' as any]: '-.36em',
+                  ['--ul-height' as any]: '.48em',
+                }}
+              >
                 <span className="hl-text">pontualidade e</span>
                 <img src={brushUrl} alt="" aria-hidden className="hl-underline" />
-              </span>{" "}
+              </span>
             
               {/* marcador 1 – bloco mais “cheio” */}
-              <span className="hl-block hl-fat">
+              <span
+                className="hl-block hl-fat"
+                style={{
+                  ['--hl-top' as any]: '-.04em',
+                  ['--hl-right' as any]: '-.55em',
+                  ['--hl-bottom' as any]: '-.06em',
+                  ['--hl-left' as any]: '-.55em',
+                }}
+              >
                 <img src={marker1Url} alt="" aria-hidden className="hl-img" />
                 <span className="hl-text">acabamento</span>
-              </span>{" "}
+              </span>
             
               {/* marcador 2 – ainda mais alto */}
-              <span className="hl-block hl-tall">
+              <span
+                className="hl-block hl-tall"
+                style={{
+                  ['--hl-top' as any]: '-.10em',
+                  ['--hl-right' as any]: '-.60em',
+                  ['--hl-bottom' as any]: '-.10em',
+                  ['--hl-left' as any]: '-.60em',
+                }}
+              >
                 <img src={marker2Url} alt="" aria-hidden className="hl-img" />
                 <span className="hl-text">impecável</span>
               </span>
+
             </h1>
 
             {/* Subheadline */}
