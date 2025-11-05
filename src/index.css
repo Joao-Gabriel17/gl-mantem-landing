@@ -154,45 +154,47 @@ All colors MUST be HSL.
     @apply tracking-tight;
   }
 
-/* Blocos de destaque */
-.hl-block{
+/* ===== Destaques do H1: versão estável com pseudo-elementos ===== */
+.hl { position: relative; display: inline-block; line-height: 1; }
+
+/* ——— SUBLINHADO GROSSO (repete na largura toda) ——— */
+.hl-underline::after{
+  content:"";
+  position:absolute;
+  left:-0.25em;              /* alonga p/ fora */
+  right:-0.25em;
+  bottom:-0.32em;            /* distância do texto */
+  height:0.42em;             /* ESPESSURA do traço */
+  background: url("/textures/brush-underline.png") repeat-x 0 50% / auto 100%;
+  pointer-events:none;
+  z-index:0;
+}
+
+/* ——— MARCADORES (bloco atrás da palavra) ——— */
+.hl-marker{
   position:relative;
-  display:inline-block;
-  white-space:nowrap;
-  line-height:1;          /* base para os cálculos em "em" */
-}
-.hl-text{ position:relative; z-index:1; }
-
-/* SUBLINHADO — bem grosso */
-.hl-underline{
-  position:absolute;
-  display:block;
-  left:-1.2em;            /* estica para fora da palavra */
-  right:-1.2em;
-  bottom:-1.05em;         /* afasta do texto */
-  height:1.60em;          /* ESPESSURA (aumente se quiser ainda mais) */
-  width:auto;
-  object-fit:cover;
+  padding: .08em .18em .14em; /* dá “corpo” pro fundo */
   z-index:0;
 }
-
-/* MARCADORES — atrás da palavra */
-.hl-img{
+.hl-marker--v1::before,
+.hl-marker--v2::before{
+  content:"";
   position:absolute;
-  display:block;
-  left:-0.90em;
-  right:-0.90em;
-  top:0.05em;
-  bottom:-0.55em;         /* deixa “parrudo” abaixo da linha de base */
-  width:auto; height:auto;
-  object-fit:cover;
-  z-index:0;
-  filter: drop-shadow(0 1px 0 rgba(0,0,0,.08));
+  inset: 0;                  /* cobre o padding */
+  background-repeat: no-repeat;
+  background-position: center 75%;
+  background-size: 110% 100%;/* deixa “parrudo” e com bordas irregulares visíveis */
+  z-index:-1;
+  filter: drop-shadow(0 1px 0 rgba(0,0,0,.10));
 }
+.hl-marker--v1::before{ background-image: url("/textures/marker-1.png"); }
+.hl-marker--v2::before{ background-image: url("/textures/marker-2.png"); }
 
-/* Em telas grandes, engorda ainda mais */
+/* Telas grandes: tudo mais grosso */
 @media (min-width:1024px){
-  .hl-underline{ left:-1.4em; right:-1.4em; bottom:-1.15em; height:1.8em; }
-  .hl-img{ left:-1.10em; right:-1.10em; bottom:-0.65em; }
+  .hl-underline::after{ bottom:-0.38em; height:0.52em; }
+  .hl-marker{ padding:.10em .22em .18em; }
+  .hl-marker--v1::before,
+  .hl-marker--v2::before{ background-size: 115% 100%; }
 }
 }
