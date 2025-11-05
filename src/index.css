@@ -154,34 +154,34 @@ All colors MUST be HSL.
     @apply tracking-tight;
   }
 
-/* Base */
-.hl-block{ position:relative; display:inline-block; white-space:nowrap; }
+/* base */
+.hl-block{ position:relative; display:inline-block; white-space:nowrap; line-height:1.05; }
 .hl-text{ position:relative; z-index:1; }
 
-/* Imagem de marcador (atrás da palavra) */
+/* marcador (atrás da palavra) */
 .hl-img{
   position:absolute;
-  inset: var(--hl-top, .10em) var(--hl-right, -.35em) var(--hl-bottom, .18em) var(--hl-left, -.35em);
+  inset: -.18em -.70em -.14em -.70em; /* ↑ aumenta altura/largura do bloco */
   width:100%; height:100%;
-  object-fit: fill;           /* preenche o bloco inteiro */
+  object-fit: fill;
   pointer-events:none; z-index:0;
 }
 
-/* Sublinhado “pincel” */
+/* sublinhado tipo pincel */
 .hl-underline{
   position:absolute;
-  left: var(--ul-left, -.10em);
-  right: var(--ul-right, -.10em);
-  bottom: var(--ul-bottom, -.32em); /* mais negativo = mais distante do texto */
-  height: var(--ul-height, .42em);  /* mais alto = traço mais grosso */
-  width:auto; object-fit:contain;
+  left: -.20em;
+  right: -.20em;
+  bottom: -.44em;     /* mais negativo = mais distante do texto */
+  height: .58em;      /* mais alto = traço mais grosso */
+  object-fit: contain;
   pointer-events:none; z-index:0;
 }
 
-/* Presets úteis */
-.hl-fat   .hl-img{ inset:.02em -.50em .08em -.50em; }     /* bloco mais “gordo” */
-.hl-tall  .hl-img{ inset:-.10em -.55em -.10em -.55em; }   /* bloco bem alto */
-.hl-thick .hl-underline{ --ul-height:.55em; --ul-bottom:-.38em; }
+/* presets extras (se quiser mais ainda) */
+.hl-fat   .hl-img{ inset: -.10em -.85em -.06em -.85em; }
+.hl-tall  .hl-img{ inset: -.22em -.85em -.22em -.85em; }
+.hl-thick .hl-underline{ bottom: -.50em; height: .68em; }
 
 @media (max-width:640px){
   .hl-img{ inset:.26em -.12em .14em -.12em; }
