@@ -8,6 +8,10 @@ import brushUrl from "@/assets/textures/brush-underline.png";
 import marker1Url from "@/assets/textures/marker-1.png";
 import marker2Url from "@/assets/textures/marker-2.png";
 
+const brushUrl  = "/textures/brush-underline.png";
+const marker1Url = "/textures/marker-1.png";
+const marker2Url = "/textures/marker-2.png";
+
 export const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center pt-24 md:pt-32 pb-20 md:pb-32 overflow-hidden bg-bg-900">
@@ -26,26 +30,50 @@ export const Hero = () => {
 
             {/* Headline */}
             <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold leading-[1.1] text-textc-100">
-              Ar-condicionado instalado com{" "}
-            
-              {/* sublinhado */}
-              <span className="hl-block hl-thick">
-                <span className="hl-text">pontualidade&nbsp;e</span>
-                <img src={brushUrl} alt="" aria-hidden className="hl-underline" />
-              </span>{" "}
-            
-              {/* marcador 1 */}
-              <span className="hl-block hl-fat">
-                <img src={marker1Url} alt="" aria-hidden className="hl-img" />
-                <span className="hl-text">acabamento</span>
-              </span>{" "}
-            
-              {/* marcador 2 */}
-              <span className="hl-block hl-tall">
-                <img src={marker2Url} alt="" aria-hidden className="hl-img" />
-                <span className="hl-text">impecável</span>
-              </span>
-            </h1>
+  Ar-condicionado instalado com{" "}
+  {/* SUBLINHADO (pontualidade e) */}
+  <span className="hl-block">
+    <span className="hl-text">pontualidade&nbsp;e</span>
+    <img
+      src={brushUrl}
+      alt=""
+      aria-hidden
+      className="hl-underline"
+      style={{
+        left: "-0.8em",
+        right: "-0.8em",
+        bottom: "-1.05em",
+        height: "1.45em",
+      }}
+    />
+  </span>{" "}
+  {/* MARCADOR 1 (acabamento) */}
+  <span className="hl-block">
+    <img
+      src={marker1Url}
+      alt=""
+      aria-hidden
+      className="hl-img"
+      style={{
+        inset: "-0.36em -1.60em -0.26em -1.60em",
+      }}
+    />
+    <span className="hl-text">acabamento</span>
+  </span>{" "}
+  {/* MARCADOR 2 (impecável) */}
+  <span className="hl-block">
+    <img
+      src={marker2Url}
+      alt=""
+      aria-hidden
+      className="hl-img"
+      style={{
+        inset: "-0.40em -1.70em -0.32em -1.70em",
+      }}
+    />
+    <span className="hl-text">impecável</span>
+  </span>
+</h1>
 
             {/* Subheadline */}
             <p className="text-xl sm:text-2xl text-textc-300 leading-relaxed max-w-2xl">
