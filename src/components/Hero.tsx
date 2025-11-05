@@ -28,48 +28,23 @@ export const Hero = () => {
             <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold leading-[1.1] text-textc-100">
               Ar-condicionado instalado com{" "}
             
-              {/* sublinhado – já mais grosso/baixo */}
-              <span
-                className="hl-block hl-thick"
-                style={{
-                  ['--ul-left' as any]: '-.15em',
-                  ['--ul-right' as any]: '-.15em',
-                  ['--ul-bottom' as any]: '-.36em',
-                  ['--ul-height' as any]: '.48em',
-                }}
-              >
-                <span className="hl-text">pontualidade e</span>
+              {/* sublinhado */}
+              <span className="hl-block hl-thick">
+                <span className="hl-text">pontualidade&nbsp;e</span>
                 <img src={brushUrl} alt="" aria-hidden className="hl-underline" />
-              </span>
+              </span>{" "}
             
-              {/* marcador 1 – bloco mais “cheio” */}
-              <span
-                className="hl-block hl-fat"
-                style={{
-                  ['--hl-top' as any]: '-.04em',
-                  ['--hl-right' as any]: '-.55em',
-                  ['--hl-bottom' as any]: '-.06em',
-                  ['--hl-left' as any]: '-.55em',
-                }}
-              >
+              {/* marcador 1 */}
+              <span className="hl-block hl-fat">
                 <img src={marker1Url} alt="" aria-hidden className="hl-img" />
                 <span className="hl-text">acabamento</span>
-              </span>
+              </span>{" "}
             
-              {/* marcador 2 – ainda mais alto */}
-              <span
-                className="hl-block hl-tall"
-                style={{
-                  ['--hl-top' as any]: '-.10em',
-                  ['--hl-right' as any]: '-.60em',
-                  ['--hl-bottom' as any]: '-.10em',
-                  ['--hl-left' as any]: '-.60em',
-                }}
-              >
+              {/* marcador 2 */}
+              <span className="hl-block hl-tall">
                 <img src={marker2Url} alt="" aria-hidden className="hl-img" />
                 <span className="hl-text">impecável</span>
               </span>
-
             </h1>
 
             {/* Subheadline */}
