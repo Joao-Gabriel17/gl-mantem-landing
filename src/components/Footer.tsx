@@ -10,7 +10,7 @@ export const Footer = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           {/* Company Info */}
           <div className="space-y-4">
-            <img src={logoImage} alt="G&L Manutenções" className="h-40 w-auto" />
+            <img src={logoImage} alt="G&L Manutenções" className="h-32 md:h-40 w-auto" />
             <p className="text-sm text-textc-300">
               Climatização de confiança em Londrina
             </p>
