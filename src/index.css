@@ -154,43 +154,45 @@ All colors MUST be HSL.
     @apply tracking-tight;
   }
 
-/* === Destaques de texto (underline + marcadores) === */
+/* Blocos de destaque */
 .hl-block{
   position:relative;
   display:inline-block;
-  white-space:nowrap;   /* não quebra dentro do bloco */
-  line-height:1;
+  white-space:nowrap;
+  line-height:1;          /* base para os cálculos em "em" */
 }
 .hl-text{ position:relative; z-index:1; }
 
-/* SUBLINHADO GROSSO (pincel) */
+/* SUBLINHADO — bem grosso */
 .hl-underline{
   position:absolute;
-  left:-0.45em;           /* estica para fora da palavra */
-  right:-0.45em;
-  bottom:-0.55em;         /* distancia do texto */
-  height:0.70em;          /* ESPESSURA do sublinhado  */
+  display:block;
+  left:-1.2em;            /* estica para fora da palavra */
+  right:-1.2em;
+  bottom:-1.05em;         /* afasta do texto */
+  height:1.60em;          /* ESPESSURA (aumente se quiser ainda mais) */
   width:auto;
   object-fit:cover;
   z-index:0;
 }
 
-/* MARCADORES (fita laranja atrás da palavra) */
+/* MARCADORES — atrás da palavra */
 .hl-img{
   position:absolute;
-  left:-0.70em;
-  right:-0.70em;
-  top:0.10em;
-  bottom:-0.30em;
+  display:block;
+  left:-0.90em;
+  right:-0.90em;
+  top:0.05em;
+  bottom:-0.55em;         /* deixa “parrudo” abaixo da linha de base */
   width:auto; height:auto;
   object-fit:cover;
   z-index:0;
   filter: drop-shadow(0 1px 0 rgba(0,0,0,.08));
 }
 
-/* dá uma engordada extra em telas grandes */
+/* Em telas grandes, engorda ainda mais */
 @media (min-width:1024px){
-  .hl-underline{ left:-0.60em; right:-0.60em; bottom:-0.70em; height:0.90em; }
-  .hl-img{ left:-0.90em; right:-0.90em; top:0.15em; bottom:-0.40em; }
+  .hl-underline{ left:-1.4em; right:-1.4em; bottom:-1.15em; height:1.8em; }
+  .hl-img{ left:-1.10em; right:-1.10em; bottom:-0.65em; }
 }
 }
