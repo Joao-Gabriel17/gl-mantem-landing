@@ -29,19 +29,16 @@ export const Hero = () => {
  <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold leading-[1.1] text-textc-100">
       Ar-condicionado instalado com{" "}
 
-/* SUBLINHADO (pontualidade e) */
 <span className="hl-block">
   <span className="hl-text">pontualidade&nbsp;e</span>
   <img src={brushUrl} alt="" aria-hidden className="hl-underline" />
 </span>{" "}
 
-/* MARCADOR 1 (acabamento) */
 <span className="hl-block">
   <img src={marker1Url} alt="" aria-hidden className="hl-img" />
   <span className="hl-text">acabamento</span>
 </span>{" "}
 
-/* MARCADOR 2 (impecável) */
 <span className="hl-block">
   <img src={marker2Url} alt="" aria-hidden className="hl-img" />
   <span className="hl-text">impecável</span>
