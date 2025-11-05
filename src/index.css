@@ -154,43 +154,34 @@ All colors MUST be HSL.
     @apply tracking-tight;
   }
 
-/* Contêiner base do destaque */
-.hl-block{
-  position: relative;
-  display: inline-block;
-  white-space: nowrap;
-}
+/* Base */
+.hl-block{ position:relative; display:inline-block; white-space:nowrap; }
+.hl-text{ position:relative; z-index:1; }
 
-/* Imagem de fundo (marca-texto/sublinhado) */
+/* Imagem de marcador (atrás da palavra) */
 .hl-img{
-  position: absolute;
-  inset: .20em -.16em .10em -.16em; /* ajuste do “bloco” atrás da palavra */
-  width: 100%;
-  height: 100%;
-  object-fit: fill;          /* preenche a palavra toda */
-  pointer-events: none;
-  z-index: 0;
-  opacity: 1;
+  position:absolute;
+  inset: var(--hl-top, .10em) var(--hl-right, -.35em) var(--hl-bottom, .18em) var(--hl-left, -.35em);
+  width:100%; height:100%;
+  object-fit: fill;           /* preenche o bloco inteiro */
+  pointer-events:none; z-index:0;
 }
 
-/* Texto sempre acima */
-.hl-text{
-  position: relative;
-  z-index: 1;
-}
-
-/* Sublinhado como imagem “estreita” lá embaixo */
+/* Sublinhado “pincel” */
 .hl-underline{
-  position: absolute;
-  left: -0.06em;
-  right: -0.06em;
-  bottom: -0.26em;  /* distância do traço ao texto */
-  height: .36em;    /* espessura do traço */
-  width: auto;
-  pointer-events: none;
-  z-index: 0;
-  object-fit: contain;
+  position:absolute;
+  left: var(--ul-left, -.10em);
+  right: var(--ul-right, -.10em);
+  bottom: var(--ul-bottom, -.32em); /* mais negativo = mais distante do texto */
+  height: var(--ul-height, .42em);  /* mais alto = traço mais grosso */
+  width:auto; object-fit:contain;
+  pointer-events:none; z-index:0;
 }
+
+/* Presets úteis */
+.hl-fat   .hl-img{ inset:.02em -.50em .08em -.50em; }     /* bloco mais “gordo” */
+.hl-tall  .hl-img{ inset:-.10em -.55em -.10em -.55em; }   /* bloco bem alto */
+.hl-thick .hl-underline{ --ul-height:.55em; --ul-bottom:-.38em; }
 
 @media (max-width:640px){
   .hl-img{ inset:.26em -.12em .14em -.12em; }
