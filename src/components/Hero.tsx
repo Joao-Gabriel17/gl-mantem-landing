@@ -29,24 +29,18 @@ export const Hero = () => {
 <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold leading-[1.1] text-textc-100">
   Ar-condicionado instalado com{" "}
 
-  {/* SUBLINHADO EM “pontualidade” */}
-  <span className="hl-block" style={{ paddingBottom: ".10em" }}>
-    <span className="hl-text">pontualidade</span>
-    <img src={brushUrl} alt="" aria-hidden className="hl-underline" />
-  </span>{" "}
-  e{" "}
-
-  {/* FAIXA EM “acabamento” */}
-  <span className="hl-block hl-pad">
-    <img src={marker1Url} alt="" aria-hidden className="hl-img" />
-    <span className="hl-text">acabamento</span>
-  </span>{" "}
-
-  {/* FAIXA EM “impecável” */}
-  <span className="hl-block hl-pad">
-    <img src={marker2Url} alt="" aria-hidden className="hl-img" />
-    <span className="hl-text">impecável</span>
-  </span>
+ <span className="hl-block" style={{ paddingBottom: ".10em" }}>
+  <span className="hl-text">pontualidade</span>
+  <img src={brushUrl} alt="" aria-hidden className="hl-underline" />
+</span>{" "}e{" "}
+<span className="hl-block hl-pad">
+  <img src={marker1Url} alt="" aria-hidden className="hl-img" />
+  <span className="hl-text">acabamento</span>
+</span>{" "}
+<span className="hl-block hl-pad">
+  <img src={marker2Url} alt="" aria-hidden className="hl-img" />
+  <span className="hl-text">impecável</span>
+</span>
 </h1>
             {/* Subheadline */}
             <p className="text-xl sm:text-2xl text-textc-300 leading-relaxed max-w-2xl">
