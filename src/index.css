@@ -154,34 +154,51 @@ All colors MUST be HSL.
     @apply tracking-tight;
   }
 
+/* ==== DESTQUES H1 – versão estável (apenas <span> + <img>) ==== */
 .hl-block{
   position: relative;
   display: inline-block;
-  line-height: 1;
-  white-space: nowrap;        /* não deixa quebrar entre as palavras do bloco */
-  vertical-align: baseline;   /* alinha com a linha do texto */
+  white-space: nowrap;      /* não quebra dentro do bloco */
+  line-height: 1;           /* base consistente */
+  vertical-align: baseline;
+  isolation: isolate;       /* garante z-index atrás do texto */
 }
 .hl-text{ position: relative; z-index: 2; }
 
-.hl-img{                      /* marcador atrás da palavra */
-  position: absolute; top:0; left:0;
-  width:100%; height:100%;    /* cobre TODO o bloco */
-  object-fit: cover; object-position: center 70%;
-  z-index: 1; pointer-events: none;
+/* Imagem de marcador (atrás da palavra) */
+.hl-img{
+  position: absolute;
+  inset: 0;                 /* cobre todo o bloco */
+  width: 120%;              /* faz a faixa “sobrar” pros lados */
+  left: -10%;
+  height: 115%;
+  top: -7%;
+  object-fit: cover;
+  object-position: center 72%;
+  z-index: 1;
+  pointer-events: none;
   filter: drop-shadow(0 1px 0 rgba(0,0,0,.12));
 }
 
-.hl-underline{                /* pincel sob a palavra */
+/* Padding dá “altura” ao bloco (controla a grossura do marcador) */
+.hl-pad{ padding: .40em .80em .44em; }   /* ajuste grosso e bonito */
+
+/* Sublinhado com pincel */
+.hl-underline{
   position: absolute;
-  left:-0.8em; right:-0.8em;  /* controle do “comprimento” */
-  bottom:-0.22em;             /* quão perto do texto */
-  height:1.05em;              /* “gordura” do traço */
-  width:auto;
-  object-fit: cover; object-position: 0 50%;
-  z-index: 1; pointer-events: none;
+  left: -10%;                /* estica além da palavra */
+  width: 120%;
+  height: .60em;             /* grossura do traço */
+  bottom: -.22em;            /* aproxima/afasta da base do texto */
+  object-fit: cover;
+  object-position: 0 50%;
+  z-index: 1;
+  pointer-events: none;
 }
 
+/* Telas grandes: tudo um pouco mais parrudo */
 @media (min-width:1024px){
-  .hl-underline{ left:-1.0em; right:-1.0em; bottom:-0.18em; height:1.20em; }
+  .hl-pad{ padding: .46em .90em .50em; }
+  .hl-underline{ height: .70em; bottom: -.18em; left:-12%; width:124%; }
 }
 }
