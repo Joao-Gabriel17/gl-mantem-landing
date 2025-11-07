@@ -155,8 +155,12 @@ All colors MUST be HSL.
   }
 
 /* ===== Destaques do H1: versão estável com pseudo-elementos ===== */
-.hl { position: relative; display: inline-block; line-height: 1; }
-
+.hl{
+  position: relative;
+  display: inline-block;
+  line-height: 1;
+  isolation: isolate;          /* <<< importantíssimo */
+}
 /* ——— SUBLINHADO GROSSO (repete na largura toda) ——— */
 .hl-underline::after{
   content:"";
