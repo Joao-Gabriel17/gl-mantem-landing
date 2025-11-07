@@ -154,44 +154,56 @@ All colors MUST be HSL.
     @apply tracking-tight;
   }
 
-/* ===== Destaques do H1: versão estável com pseudo-elementos ===== */
+/* ===== Destaques do H1 (versão com pseudo-elementos) ===== */
 .hl{
   position: relative;
   display: inline-block;
   line-height: 1;
-  isolation: isolate;          /* <<< importantíssimo */
+  isolation: isolate;
 }
-/* ——— SUBLINHADO GROSSO (repete na largura toda) ——— */
+
+/* SUBLINHADO GROSSO */
 .hl-underline::after{
   content:"";
   position:absolute;
-  left:-0.25em; right:-0.25em;
-  bottom:-0.32em;
-  height:0.52em;               /* pode aumentar */
+  /* aumente a largura para além da palavra */
+  left:-0.65em; 
+  right:-0.65em;
+  /* traga o traço mais perto do texto e deixe bem alto */
+  bottom:-0.22em;    
+  height:0.90em;     
   background: url("/textures/brush-underline.png") repeat-x 0 50% / auto 100%;
-  z-index:-1;                  /* atrás do texto, visível graças ao isolation */
+  z-index:-1;
   pointer-events:none;
 }
 
-.hl-marker{ position:relative; padding:.10em .22em .18em; z-index:0; }
+/* MARCADORES (bloco atrás da palavra) */
+.hl-marker{
+  position:relative; 
+  /* padding maior = bloco mais alto */
+  padding:.22em .40em .26em; 
+  z-index:0;
+}
+
 .hl-marker--v1::before,
 .hl-marker--v2::before{
   content:"";
-  position:absolute; inset:0;
+  position:absolute; 
+  inset:0;
   background-repeat:no-repeat;
-  background-position:center 75%;
-  background-size:115% 100%;
-  z-index:-1;                  /* idem */
-  filter: drop-shadow(0 1px 0 rgba(0,0,0,.10));
+  background-position:center 70%;
+  /* preencha completamente a caixa do span */
+  background-size:100% 100%;
+  z-index:-1;
+  filter: drop-shadow(0 1px 0 rgba(0,0,0,.12));
 }
+
 .hl-marker--v1::before{ background-image:url("/textures/marker-1.png"); }
 .hl-marker--v2::before{ background-image:url("/textures/marker-2.png"); }
 
-/* Telas grandes: tudo mais grosso */
+/* Telas grandes: mais gordura ainda */
 @media (min-width:1024px){
-  .hl-underline::after{ bottom:-0.38em; height:0.52em; }
-  .hl-marker{ padding:.10em .22em .18em; }
-  .hl-marker--v1::before,
-  .hl-marker--v2::before{ background-size: 115% 100%; }
+  .hl-underline::after{ bottom:-0.18em; height:1.05em; left:-0.8em; right:-0.8em; }
+  .hl-marker{ padding:.26em .48em .30em; }
 }
 }
