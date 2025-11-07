@@ -26,11 +26,26 @@ export const Hero = () => {
             </Badge>
 
             {/* Headline */}
- <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold leading-[1.1] text-textc-100">
+<h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold leading-[1.1] text-textc-100">
   Ar-condicionado instalado com{" "}
-  <span className="hl hl-underline">pontualidade</span> e{" "}
-  <span className="hl hl-marker hl-marker--v1">acabamento</span>{" "}
-  <span className="hl hl-marker hl-marker--v2">impecável</span>
+  
+  {/* SUBLINHADO sob “pontualidade e” */}
+  <span className="hl-block">
+    <span className="hl-text">pontualidade e</span>
+    <img src={brushUrl} alt="" aria-hidden className="hl-underline" />
+  </span>{" "}
+
+  {/* MARCADOR 1 atrás de “acabamento” */}
+  <span className="hl-block" style={{ /* mais “gordura” no bloco */ padding: ".28em .50em .32em" }}>
+    <img src={marker1Url} alt="" aria-hidden className="hl-img" />
+    <span className="hl-text">acabamento</span>
+  </span>{" "}
+
+  {/* MARCADOR 2 atrás de “impecável” */}
+  <span className="hl-block" style={{ padding: ".30em .56em .34em" }}>
+    <img src={marker2Url} alt="" aria-hidden className="hl-img" />
+    <span className="hl-text">impecável</span>
+  </span>
 </h1>
 
             {/* Subheadline */}
