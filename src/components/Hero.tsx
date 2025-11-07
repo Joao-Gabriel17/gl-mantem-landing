@@ -28,26 +28,23 @@ export const Hero = () => {
             {/* Headline */}
 <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold leading-[1.1] text-textc-100">
   Ar-condicionado instalado com{" "}
-  
-  {/* SUBLINHADO sob “pontualidade e” */}
+  {/* sublinhado apenas em “pontualidade” */}
   <span className="hl-block">
-    <span className="hl-text">pontualidade e</span>
+    <span className="hl-text">pontualidade</span>
     <img src={brushUrl} alt="" aria-hidden className="hl-underline" />
   </span>{" "}
-
-  {/* MARCADOR 1 atrás de “acabamento” */}
-  <span className="hl-block" style={{ /* mais “gordura” no bloco */ padding: ".28em .50em .32em" }}>
+  e{" "}
+  {/* faixa atrás de “acabamento” */}
+  <span className="hl-block" style={{ padding: ".34em .70em .36em" }}>
     <img src={marker1Url} alt="" aria-hidden className="hl-img" />
     <span className="hl-text">acabamento</span>
   </span>{" "}
-
-  {/* MARCADOR 2 atrás de “impecável” */}
-  <span className="hl-block" style={{ padding: ".30em .56em .34em" }}>
+  {/* faixa atrás de “impecável” */}
+  <span className="hl-block" style={{ padding: ".36em .78em .40em" }}>
     <img src={marker2Url} alt="" aria-hidden className="hl-img" />
     <span className="hl-text">impecável</span>
   </span>
 </h1>
-
             {/* Subheadline */}
             <p className="text-xl sm:text-2xl text-textc-300 leading-relaxed max-w-2xl">
               Equipe certificada em Londrina e região. Higienização profissional que elimina ácaros, reduz consumo de energia e melhora sua saúde. Orçamento em até 2 horas.
