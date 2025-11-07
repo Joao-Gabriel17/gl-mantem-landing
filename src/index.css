@@ -165,34 +165,27 @@ All colors MUST be HSL.
 .hl-underline::after{
   content:"";
   position:absolute;
-  left:-0.25em;              /* alonga p/ fora */
-  right:-0.25em;
-  bottom:-0.32em;            /* distância do texto */
-  height:0.42em;             /* ESPESSURA do traço */
+  left:-0.25em; right:-0.25em;
+  bottom:-0.32em;
+  height:0.52em;               /* pode aumentar */
   background: url("/textures/brush-underline.png") repeat-x 0 50% / auto 100%;
+  z-index:-1;                  /* atrás do texto, visível graças ao isolation */
   pointer-events:none;
-  z-index:0;
 }
 
-/* ——— MARCADORES (bloco atrás da palavra) ——— */
-.hl-marker{
-  position:relative;
-  padding: .08em .18em .14em; /* dá “corpo” pro fundo */
-  z-index:0;
-}
+.hl-marker{ position:relative; padding:.10em .22em .18em; z-index:0; }
 .hl-marker--v1::before,
 .hl-marker--v2::before{
   content:"";
-  position:absolute;
-  inset: 0;                  /* cobre o padding */
-  background-repeat: no-repeat;
-  background-position: center 75%;
-  background-size: 110% 100%;/* deixa “parrudo” e com bordas irregulares visíveis */
-  z-index:-1;
+  position:absolute; inset:0;
+  background-repeat:no-repeat;
+  background-position:center 75%;
+  background-size:115% 100%;
+  z-index:-1;                  /* idem */
   filter: drop-shadow(0 1px 0 rgba(0,0,0,.10));
 }
-.hl-marker--v1::before{ background-image: url("/textures/marker-1.png"); }
-.hl-marker--v2::before{ background-image: url("/textures/marker-2.png"); }
+.hl-marker--v1::before{ background-image:url("/textures/marker-1.png"); }
+.hl-marker--v2::before{ background-image:url("/textures/marker-2.png"); }
 
 /* Telas grandes: tudo mais grosso */
 @media (min-width:1024px){
