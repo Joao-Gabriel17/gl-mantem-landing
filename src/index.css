@@ -154,56 +154,30 @@ All colors MUST be HSL.
     @apply tracking-tight;
   }
 
-/* ===== Destaques do H1 (versão com pseudo-elementos) ===== */
-.hl{
-  position: relative;
-  display: inline-block;
-  line-height: 1;
-  isolation: isolate;
-}
+/* ===== Destaques com <img> absolutas (escala por em) ===== */
+.hl-block{ position:relative; display:inline-block; line-height:1; }
+.hl-text { position:relative; z-index:2; }
 
-/* SUBLINHADO GROSSO */
-.hl-underline::after{
-  content:"";
-  position:absolute;
-  /* aumente a largura para além da palavra */
-  left:-0.65em; 
-  right:-0.65em;
-  /* traga o traço mais perto do texto e deixe bem alto */
-  bottom:-0.22em;    
-  height:0.90em;     
-  background: url("/textures/brush-underline.png") repeat-x 0 50% / auto 100%;
-  z-index:-1;
-  pointer-events:none;
-}
-
-/* MARCADORES (bloco atrás da palavra) */
-.hl-marker{
-  position:relative; 
-  /* padding maior = bloco mais alto */
-  padding:.22em .40em .26em; 
-  z-index:0;
-}
-
-.hl-marker--v1::before,
-.hl-marker--v2::before{
-  content:"";
-  position:absolute; 
-  inset:0;
-  background-repeat:no-repeat;
-  background-position:center 70%;
-  /* preencha completamente a caixa do span */
-  background-size:100% 100%;
-  z-index:-1;
+/* imagem do marcador “faixa” atrás da palavra */
+.hl-img{
+  position:absolute; inset:0;
+  object-fit:cover; object-position:center 70%;
+  z-index:1; pointer-events:none;
   filter: drop-shadow(0 1px 0 rgba(0,0,0,.12));
 }
 
-.hl-marker--v1::before{ background-image:url("/textures/marker-1.png"); }
-.hl-marker--v2::before{ background-image:url("/textures/marker-2.png"); }
+/* sublinhado “pincel” sob a palavra */
+.hl-underline{
+  position:absolute;
+  left:-0.8em; right:-0.8em;
+  bottom:-0.22em;
+  height:1.05em;             /* GROSSO (aumente se quiser) */
+  object-fit:cover; object-position:0 50%;
+  z-index:1; pointer-events:none;
+}
 
-/* Telas grandes: mais gordura ainda */
+/* Tamanhos ainda maiores em telas grandes */
 @media (min-width:1024px){
-  .hl-underline::after{ bottom:-0.18em; height:1.05em; left:-0.8em; right:-0.8em; }
-  .hl-marker{ padding:.26em .48em .30em; }
+  .hl-underline{ left:-1.0em; right:-1.0em; bottom:-0.18em; height:1.20em; }
 }
 }
