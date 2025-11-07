@@ -28,61 +28,12 @@ export const Hero = () => {
             {/* Headline */}
 <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold leading-[1.1] text-textc-100">
   Ar-condicionado instalado com{" "}
-
-  {/* SUBLINHADO exatamente na largura da palavra */}
-  <span className="hl-block" style={{ paddingBottom: ".12em", overflow: "visible" }}>
-    <span className="hl-text">pontualidade</span>
-    <img
-      src={brushUrl}
-      alt=""
-      aria-hidden
-      className="hl-underline"
-      style={{
-        left: 0,            // exatamente sob a palavra
-        width: "100%",      // sem sobrar pros lados
-        height: ".90em",    // grossura
-        bottom: "-.22em",   // distância da base do texto
-      }}
-    />
-  </span>{" "}
+  <span className="hl hl-underline">pontualidade</span>{" "}
   e{" "}
-
-  {/* MARCADOR “acabamento” — bloco atrás da palavra */}
-  <span className="hl-block hl-pad" style={{ overflow: "visible" }}>
-    <img
-      src={marker1Url}
-      alt=""
-      aria-hidden
-      className="hl-img"
-      style={{
-        top: "-28%",         // sobe a faixa
-        height: "180%",      // deixa bem grossa
-        left: "-8%",         // sobra lateral leve
-        width: "116%",
-        objectPosition: "center 70%",
-      }}
-    />
-    <span className="hl-text">acabamento</span>
-  </span>{" "}
-
-  {/* MARCADOR “impecável” — bloco atrás da palavra */}
-  <span className="hl-block hl-pad" style={{ overflow: "visible" }}>
-    <img
-      src={marker2Url}
-      alt=""
-      aria-hidden
-      className="hl-img"
-      style={{
-        top: "-30%",
-        height: "185%",
-        left: "-10%",
-        width: "120%",
-        objectPosition: "center 68%",
-      }}
-    />
-    <span className="hl-text">impecável</span>
-  </span>
+  <span className="hl hl-marker hl-marker--v1">acabamento</span>{" "}
+  <span className="hl hl-marker hl-marker--v2">impecável</span>
 </h1>
+            
             {/* Subheadline */}
             <p className="text-xl sm:text-2xl text-textc-300 leading-relaxed max-w-2xl">
               Equipe certificada em Londrina e região. Higienização profissional que elimina ácaros, reduz consumo de energia e melhora sua saúde. Orçamento em até 2 horas.
