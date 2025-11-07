@@ -5,10 +5,6 @@ import heroImage from "@/assets/hero-ac-install.jpg";
 import { trackEvent } from "@/lib/analytics";
 import { WhatsAppLink } from "@/components/WhatsAppLink";
 
-import marker1Url from public/textures/brush-underline.png;
-import marker2Url from public/textures/marker-1.png;
-import brushUrl   from public/textures/marker-2.png;
-
 export const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center pt-24 md:pt-32 pb-20 md:pb-32 overflow-hidden bg-bg-900">
