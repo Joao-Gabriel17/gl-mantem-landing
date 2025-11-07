@@ -154,51 +154,50 @@ All colors MUST be HSL.
     @apply tracking-tight;
   }
 
-/* ==== DESTQUES H1 – versão estável (apenas <span> + <img>) ==== */
-.hl-block{
+/* ========= HIGHLIGHTS ESTÁVEIS (sem <img>) ========= */
+.hl {
   position: relative;
   display: inline-block;
-  white-space: nowrap;      /* não quebra dentro do bloco */
-  line-height: 1;           /* base consistente */
-  vertical-align: baseline;
-  isolation: isolate;       /* garante z-index atrás do texto */
+  white-space: nowrap;      /* mantém a palavra junta */
+  line-height: 1;
+  isolation: isolate;       /* permite z-index negativo do fundo */
 }
-.hl-text{ position: relative; z-index: 2; }
 
-/* Imagem de marcador (atrás da palavra) */
-.hl-img{
+/* SUBLINHADO “pincel” */
+.hl-underline::after {
+  content: "";
   position: absolute;
-  inset: 0;                 /* cobre todo o bloco */
-  width: 120%;              /* faz a faixa “sobrar” pros lados */
-  left: -10%;
-  height: 115%;
-  top: -7%;
-  object-fit: cover;
-  object-position: center 72%;
-  z-index: 1;
+  left: 0;                  /* casa com a largura da palavra */
+  right: 0;
+  bottom: -0.22em;          /* distância da base do texto */
+  height: 0.9em;            /* grossura do traço */
+  background: url("/textures/brush-underline.png") repeat-x center / auto 100%;
+  z-index: -1;              /* fica atrás do texto */
   pointer-events: none;
+}
+
+/* MARCADORES como fundo do span */
+.hl-marker {
+  padding: .32em .40em .28em;   /* controla a “grossura” da faixa */
+}
+.hl-marker--v1::before,
+.hl-marker--v2::before {
+  content: "";
+  position: absolute;
+  inset: -0.20em -0.28em -0.22em -0.28em;  /* sobra um pouco nas bordas */
+  background-repeat: no-repeat;
+  background-position: center 72%;
+  background-size: 100% 100%;              /* estica para cobrir a palavra */
+  z-index: -1;                             
   filter: drop-shadow(0 1px 0 rgba(0,0,0,.12));
 }
+.hl-marker--v1::before { background-image: url("/textures/marker-1.png"); }
+.hl-marker--v2::before { background-image: url("/textures/marker-2.png"); }
 
-/* Padding dá “altura” ao bloco (controla a grossura do marcador) */
-.hl-pad{ padding: .40em .80em .44em; }   /* ajuste grosso e bonito */
-
-/* Sublinhado com pincel */
-.hl-underline{
-  position: absolute;
-  left: -10%;                /* estica além da palavra */
-  width: 120%;
-  height: .60em;             /* grossura do traço */
-  bottom: -.22em;            /* aproxima/afasta da base do texto */
-  object-fit: cover;
-  object-position: 0 50%;
-  z-index: 1;
-  pointer-events: none;
-}
-
-/* Telas grandes: tudo um pouco mais parrudo */
-@media (min-width:1024px){
-  .hl-pad{ padding: .46em .90em .50em; }
-  .hl-underline{ height: .70em; bottom: -.18em; left:-12%; width:124%; }
+/* Em telas grandes, tudo mais parrudo */
+@media (min-width: 1024px) {
+  .hl-underline::after { height: 1.0em; bottom: -0.24em; }
+  .hl-marker { padding: .36em .46em .32em; }
+  .hl-marker--v1::before, .hl-marker--v2::before { inset: -0.22em -0.32em -0.24em -0.32em; }
 }
 }
