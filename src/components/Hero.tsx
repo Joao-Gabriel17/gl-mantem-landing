@@ -28,19 +28,22 @@ export const Hero = () => {
             {/* Headline */}
 <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold leading-[1.1] text-textc-100">
   Ar-condicionado instalado com{" "}
-  {/* sublinhado apenas em “pontualidade” */}
-  <span className="hl-block">
+
+  {/* SUBLINHADO EM “pontualidade” */}
+  <span className="hl-block" style={{ paddingBottom: ".10em" }}>
     <span className="hl-text">pontualidade</span>
     <img src={brushUrl} alt="" aria-hidden className="hl-underline" />
   </span>{" "}
   e{" "}
-  {/* faixa atrás de “acabamento” */}
-  <span className="hl-block" style={{ padding: ".34em .70em .36em" }}>
+
+  {/* FAIXA EM “acabamento” */}
+  <span className="hl-block hl-pad">
     <img src={marker1Url} alt="" aria-hidden className="hl-img" />
     <span className="hl-text">acabamento</span>
   </span>{" "}
-  {/* faixa atrás de “impecável” */}
-  <span className="hl-block" style={{ padding: ".36em .78em .40em" }}>
+
+  {/* FAIXA EM “impecável” */}
+  <span className="hl-block hl-pad">
     <img src={marker2Url} alt="" aria-hidden className="hl-img" />
     <span className="hl-text">impecável</span>
   </span>
