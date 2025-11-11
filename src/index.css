@@ -187,7 +187,7 @@ All colors MUST be HSL.
   .hl-marker--v2::before{
     content:"";
     position:absolute;
-    inset:-0.32em -0.60em -0.58em -0.60em; /* cobertura vertical moderada */
+    inset:-0.32em -0.60em -1em -0.60em; /* cobertura vertical moderada */
     background-repeat:no-repeat;
     background-position:center 74%;        /* ajuste vertical discreto */
     background-size:145% 145%;             /* altura moderada */
