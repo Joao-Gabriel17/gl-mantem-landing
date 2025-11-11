@@ -161,22 +161,9 @@ All colors MUST be HSL.
   .hl { position: relative; display: inline-block; white-space: nowrap; line-height: 1; isolation: isolate; }
   .hl-underline::after {
     content:""; position:absolute; left:0; right:0;
-    bottom:-0.22em; height:0.96em;
-    background: url("/textures/brush-underline.png") repeat-x center / auto 100%;
-    z-index:-1; pointer-events:none;
-  }
-  .hl-marker { position:relative; padding:.40em .54em .36em; }
-  .hl-marker--v1::before, .hl-marker--v2::before{
-    content:""; position:absolute;
-    inset:-0.26em -0.36em -0.28em -0.36em;
-    background-repeat:no-repeat; background-position:center 72%;
-    background-size:100% 100%; z-index:-1; filter:drop-shadow(0 1px 0 rgba(0,0,0,.12));
   }
   .hl-marker--v1::before{ background-image:url("/textures/marker-1.png"); }
   .hl-marker--v2::before{ background-image:url("/textures/marker-2.png"); }
   @media (min-width:1024px){
-    .hl-underline::after{ height:1.07em; bottom:-0.26em; }
-    .hl-marker{ padding:.46em .64em .40em; }
-    .hl-marker--v1::before, .hl-marker--v2::before{ inset:-0.32em -0.44em -0.34em -0.44em; }
   }
 }
