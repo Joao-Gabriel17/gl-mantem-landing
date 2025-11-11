@@ -181,13 +181,13 @@ All colors MUST be HSL.
   /* MARCADORES — faixas atrás da palavra */
   .hl-marker{
     position:relative;
-    padding:.50em .78em 2em;    /* VARIAÇÃO A: leve, cobre 90-100% */
+    padding:.50em .78em .58em;    /* VARIAÇÃO A: leve, cobre 90-100% */
   }
   .hl-marker--v1::before,
   .hl-marker--v2::before{
     content:"";
     position:absolute;
-    inset:-0.32em -0.60em -0.58em -0.60em; /* cobertura vertical moderada */
+    inset:-0.32em -0.60em -1em -0.60em; /* cobertura vertical moderada */
     background-repeat:no-repeat;
     background-position:center 74%;        /* ajuste vertical discreto */
     background-size:145% 145%;             /* altura moderada */
