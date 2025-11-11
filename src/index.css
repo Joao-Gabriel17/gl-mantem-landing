@@ -178,30 +178,39 @@ All colors MUST be HSL.
     pointer-events:none;
   }
 
-  /* MARCADORES — faixas atrás da palavra */
-  .hl-marker{
-    position:relative;
-    padding:.50em .78em .46em;    /* controla a “altura” da faixa */
-  }
+  /* MARCADORES — cobrir a palavra inteira (altura) sem mudar largura */
+.hl-marker{
+  position: relative;
+  line-height: 1;
+  padding: .22em .50em .82em;   /* ↑ aumenta só para baixo */
+  z-index: 0;
+}
+
+.hl-marker--v1::before,
+.hl-marker--v2::before{
+  content:"";
+  position:absolute;
+
+  /* top | right | bottom | left — só o bottom cresce (mais negativo) */
+  inset: -0.14em -0.40em -0.88em -0.40em;
+
+  /* mantém a mesma largura; aumenta só a ALTURA da faixa */
+  background-repeat:no-repeat;
+  background-position:center 88%;  /* empurra levemente para baixo */
+  background-size:100% 175%;       /* 100% largura, 175% altura */
+
+  z-index:-1;
+  filter: drop-shadow(0 1px 0 rgba(0,0,0,.12));
+}
+
+/* telas ≥1024px: um pouco mais de cobertura para baixo */
+@media (min-width:1024px){
+  .hl-marker{ padding-bottom: .92em; }
   .hl-marker--v1::before,
   .hl-marker--v2::before{
-    content:"";
-    position:absolute;
-    inset:-0.34em -0.60em -0.36em -0.60em; /* sobra ao redor */
-    background-repeat:no-repeat;
-    background-position:center 70%;        /* centraliza textura */
-    background-size:118% 102%;             /* ligeiro overscan */
-    z-index:-1;
-    filter:drop-shadow(0 1px 0 rgba(0,0,0,.12));
-    pointer-events:none;
+    inset: -0.16em -0.42em -0.98em -0.42em;
+    background-position: center 90%;
+    background-size: 100% 185%;
   }
-  .hl-marker--v1::before{ background-image:url("/textures/marker-1.png"); }
-  .hl-marker--v2::before{ background-image:url("/textures/marker-2.png"); }
-
-  @media (min-width:1024px){
-    .hl-underline::after{ height:1.28em; bottom:-0.30em; }
-    .hl-marker{ padding:.56em .88em .52em; }
-    .hl-marker--v1::before,
-    .hl-marker--v2::before{ inset:-0.38em -0.68em -0.40em -0.68em; background-size:120% 104%; }
-  }
+}
 }
