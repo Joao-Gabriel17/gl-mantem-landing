@@ -163,7 +163,6 @@ All colors MUST be HSL.
     display: inline-block;
     white-space: nowrap;
     line-height: 1;
-    vertical-align: baseline;
     isolation: isolate; /* permite z-index negativo atrás do texto */
   }
 
@@ -181,33 +180,28 @@ All colors MUST be HSL.
 
   /* MARCADORES — faixas atrás da palavra */
   .hl-marker{
-    position: relative;
-    display: inline-block;
-    z-index: 0;
-    padding: .26em .46em .58em;   /* controla a “altura” da faixa */
+    position:relative;
+    padding:.50em .78em .46em;    /* controla a “altura” da faixa */
   }
   .hl-marker--v1::before,
   .hl-marker--v2::before{
     content:"";
     position:absolute;
-    inset:-0.12em -0.36em -0.66em -0.36em; /* sobra ao redor */
+    inset:-0.34em -0.60em -0.36em -0.60em; /* sobra ao redor */
     background-repeat:no-repeat;
-    background-position:center 80%;
-    background-size:100% 112%;
+    background-position:center 70%;        /* centraliza textura */
+    background-size:118% 102%;             /* ligeiro overscan */
     z-index:-1;
-    pointer-events:none;
     filter:drop-shadow(0 1px 0 rgba(0,0,0,.12));
+    pointer-events:none;
   }
   .hl-marker--v1::before{ background-image:url("/textures/marker-1.png"); }
   .hl-marker--v2::before{ background-image:url("/textures/marker-2.png"); }
 
   @media (min-width:1024px){
     .hl-underline::after{ height:1.28em; bottom:-0.30em; }
-    .hl-marker{ padding:.30em .52em .68em; }
+    .hl-marker{ padding:.56em .88em .52em; }
     .hl-marker--v1::before,
-    .hl-marker--v2::before{
-      inset:-0.14em -0.40em -0.78em -0.40em;
-      background-size:100% 115%;
-    }
+    .hl-marker--v2::before{ inset:-0.38em -0.68em -0.40em -0.68em; background-size:120% 104%; }
   }
 }
