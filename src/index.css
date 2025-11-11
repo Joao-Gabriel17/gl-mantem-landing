@@ -158,7 +158,7 @@ All colors MUST be HSL.
 
 /* ===== Destaques do H1 ===== */
 @layer base {
-  .hl {
+  .hl{
     position: relative;
     display: inline-block;
     white-space: nowrap;
@@ -166,56 +166,42 @@ All colors MUST be HSL.
     isolation: isolate; /* permite z-index negativo atrás do texto */
   }
 
-  /* SUBLINHADO – posicionado abaixo do baseline e mais espesso */
-  .hl-underline::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: -0.30em;           /* empurra para baixo do baseline */
-    height: 0.38em;            /* um pouco mais espesso */
-    background: url("/textures/brush-underline.png") repeat-x 0 90% / auto 100%;
-    z-index: -1;
-    pointer-events: none;
+  /* SUBLINHADO — largura exata da palavra "pontualidade" */
+  .hl-underline::after{
+    content:"";
+    position:absolute;
+    left:0; right:0;              /* largura da palavra */
+    bottom:-0.28em;               /* encosta na base */
+    height:1.20em;                /* grossura do pincel */
+    background:url("/textures/brush-underline.png") repeat-x center / auto 100%;
+    z-index:-1;
+    pointer-events:none;
   }
 
-  /* MARCADORES – aumentar cobertura na metade inferior */
-  .hl-marker {
-    position: relative;
-    padding: .28em .50em .60em; /* mais padding embaixo para cobrir a parte inferior */
-    z-index: 0;
+  /* MARCADORES — faixas atrás da palavra */
+  .hl-marker{
+    position:relative;
+    padding:.50em .78em .46em;    /* controla a “altura” da faixa */
   }
-
   .hl-marker--v1::before,
-  .hl-marker--v2::before {
-    content: "";
-    position: absolute;
-    inset: -0.18em -0.40em -0.46em -0.40em; /* maior extensão para baixo */
-    background-repeat: no-repeat;
-    background-position: center 84%;        /* levemente mais baixo */
-    background-size: 112% 122%;             /* mais alto para pegar a parte de baixo */
-    z-index: -1;
-    filter: drop-shadow(0 1px 0 rgba(0,0,0,.12));
+  .hl-marker--v2::before{
+    content:"";
+    position:absolute;
+    inset:-0.34em -0.60em -0.36em -0.60em; /* sobra ao redor */
+    background-repeat:no-repeat;
+    background-position:center 70%;        /* centraliza textura */
+    background-size:118% 102%;             /* ligeiro overscan */
+    z-index:-1;
+    filter:drop-shadow(0 1px 0 rgba(0,0,0,.12));
+    pointer-events:none;
   }
+  .hl-marker--v1::before{ background-image:url("/textures/marker-1.png"); }
+  .hl-marker--v2::before{ background-image:url("/textures/marker-2.png"); }
 
-  .hl-marker--v1::before { background-image: url("/textures/marker-1.png"); }
-  .hl-marker--v2::before { background-image: url("/textures/marker-2.png"); }
-
-  /* Telas grandes: refino fino mantendo o mesmo comportamento */
-  @media (min-width: 1024px) {
-    .hl-underline::after {
-      bottom: -0.34em;
-      height: 0.42em;
-      background-position: 0 92%;
-    }
-    .hl-marker {
-      padding: .30em .56em .66em;
-    }
+  @media (min-width:1024px){
+    .hl-underline::after{ height:1.28em; bottom:-0.30em; }
+    .hl-marker{ padding:.56em .88em .52em; }
     .hl-marker--v1::before,
-    .hl-marker--v2::before {
-      inset: -0.20em -0.44em -0.52em -0.44em;
-      background-position: center 86%;
-      background-size: 114% 126%;
-    }
+    .hl-marker--v2::before{ inset:-0.38em -0.68em -0.40em -0.68em; background-size:120% 104%; }
   }
 }
