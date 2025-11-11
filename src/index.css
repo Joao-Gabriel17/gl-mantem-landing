@@ -190,7 +190,7 @@ All colors MUST be HSL.
     inset:-0.32em -0.60em -1em -0.60em; /* cobertura vertical moderada */
     background-repeat:no-repeat;
     background-position:center 74%;        /* ajuste vertical discreto */
-    background-size:145% 145%;             /* altura moderada */
+    background-size:145% 200%;             /* altura moderada */
     z-index:-1;
     filter:drop-shadow(0 1px 0 rgba(0,0,0,.12));
     pointer-events:none;
