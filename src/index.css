@@ -75,6 +75,13 @@ All colors MUST be HSL.
     --sidebar-accent-foreground: 216 30% 97%;
     --sidebar-border: 216 17% 22%;
     --sidebar-ring: 18 100% 50%;
+    --hl-marker-scale: 1.65;
+  }
+
+  @media (min-width: 1024px) {
+    :root {
+      --hl-marker-scale: 1.85;
+    }
   }
 
   :root {
@@ -182,19 +189,12 @@ All colors MUST be HSL.
   /* MARCADORES — faixas atrás da palavra */
   .hl-marker{
     position:relative;
-    display:inline-block;         /* evita quebra para baixo */
-    z-index:0;
-    padding:.22em .40em .40em;    /* controla a “altura” da faixa */
     isolation:isolate;
   }
   .hl-marker--v1::before,
   .hl-marker--v2::before{
     content:"";
     position:absolute;
-    inset:-0.10em -0.32em -0.44em -0.32em; /* sobra ao redor, com mais altura para baixo */
-    background-repeat:no-repeat;
-    background-position:center 78%;        /* centraliza textura */
-    background-size:100% 100%;             /* mantém a largura */
     pointer-events:none;
     z-index:-1;
     filter:drop-shadow(0 1px 0 rgba(0,0,0,.12));
@@ -205,6 +205,5 @@ All colors MUST be HSL.
   @media (min-width:1024px){
     .hl-marker{ padding:.26em .46em .48em; }
     .hl-marker--v1::before,
-    .hl-marker--v2::before{ inset:-0.12em -0.36em -0.52em -0.36em; }
   }
 }
